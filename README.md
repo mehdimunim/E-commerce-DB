@@ -1,6 +1,6 @@
 # Base de données pour site de e-commerce
 
- > Projet de Base Donnée : modéliser, créer un site de commerce, pour y faire de requêtes SQL
+ > Projet de Base Donnée : modéliser, créer un site de commerce, pour y faire des requêtes SQL
 
 ## Table des matières
 * [Description](#description)
