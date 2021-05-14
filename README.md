@@ -2,7 +2,9 @@
 
 Projet de Base Donnée : modéliser, créer un site de commerce, pour y faire de requêtes SQL
 
-# Equipe
+## Description
+
+## Equipe
 
 Mamadou DANSOKHO [num etudiant]
 
@@ -20,11 +22,4 @@ Mehdi MUNIM [num etudiant]
 ## Fonctionnalités
 
 ## Sources
-
-
-
-
-
-## Presentation
-
 
