@@ -4,11 +4,11 @@
             "previewLimit": 50,
             "server": "localhost",
             "port": 5432,
+            "askForPassword": false,
             "driver": "PostgreSQL",
             "name": "mehdi",
-            "database": "ecommerce",
-            "username": "mehdi",
-            "password": ""
+            "database": "mehdi",
+            "username": "mehdi"
         }
     ]
 }

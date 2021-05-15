@@ -1,0 +1,1 @@
+CREATE TABLE mytable (test int NOT NULL)
