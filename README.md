@@ -44,7 +44,50 @@ Enfin, nos clients peuvent attribuer une note au produits achetés.
 2. Lancer `init/fill.sql`
 3. Effectuer les requêtes voulues grâce à `REQ/reqX.sql` ou X va de 1 à 20. 
 
-[Ce que contient chaque fichier]
+Alternativement lancer le fichier `run.sh` puis faire les [requêtes désirées] (#REQ).
+
+## Contenu
+
+### run.sh
+
+Initialise les tables et lance la requête 1.
+
+### CSV
+
+Contenu des tables
+
+## init
+
+Commande SQL pour initialiser les tables
+
+## modelisation
+
+Notre modélisation Entité-Relation et en schéma relationel pour la base de données
+
+### REQ
+
+Requêtes SQL
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
 
 ## Exemples
 
