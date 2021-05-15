@@ -39,6 +39,7 @@ Enfin, nos clients peuvent attribuer une note au produits achetés.
 ## Utilisation
 
 > Comment initialiser la BD ?
+
 1- Lancer le fichier init/create.sql 
 2- Lancer init/fill.sql
 3- Effectuer les requêtes voulues grâce à REQ/reqX.sql ou X va de 1 à 20. 
