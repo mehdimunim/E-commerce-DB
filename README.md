@@ -17,7 +17,7 @@
 ## Equipe
 Mamadou DANSOKHO [num etudiant]
 
-Mehdi MUNIM [num etudiant]
+Mehdi MUNIM 21964021
 
 ## Utilisation
 [Ce que contient chaque fichier]
@@ -29,8 +29,9 @@ Mehdi MUNIM [num etudiant]
 ## Fonctionnalités
 
 ## Sources
-
 * Pour la table livre.csv : Goodreads
+
+
 ## License 
 MIT License 
 
