@@ -44,7 +44,7 @@ Enfin, nos clients peuvent attribuer une note au produits achetés.
 2. Lancer `init/fill.sql`
 3. Effectuer les requêtes voulues grâce à `REQ/reqX.sql` ou X va de 1 à 20. 
 
-Alternativement lancer le fichier `run.sh` puis faire les [requêtes désirées] (#REQ).
+Alternativement lancer le fichier `run.sh` puis faire les [requêtes](#REQ) désirées .
 
 ## Contenu
 
