@@ -30,6 +30,7 @@ Mehdi MUNIM [num etudiant]
 
 ## Sources
 
+* Pour la table livre.csv : Goodreads
 ## License 
 MIT License 
 
