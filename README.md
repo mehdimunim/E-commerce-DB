@@ -13,6 +13,7 @@
 * [License](#license)
 
 ## Equipe
+
 Mamadou DANSOKHO [num etudiant]
 
 Mehdi MUNIM 21964021
@@ -21,13 +22,13 @@ Mehdi MUNIM 21964021
 
 Dans ce projet, on modélise un site de e-commerce. 
 
-Nous avons choisi de le focaliser sur la vente de livres et revues. 
+Nous avons choisi de nous focaliser sur la vente de livres et périodiques. 
 
 Les prix peuvent évoluer au cours du temps, c'est pour cela qu'on en garde une trace.
 
-Nos clients entre des informations personnelles dans le système. Il peuvent commander plusieurs produits, pourvus qu'ils soient disponibles. 
+Nos clients entrent des informations personnelles dans le système. Il peuvent commander plusieurs produits, pourvus qu'ils soient disponibles. 
 
-Un client peut annuler sa commande et être remboursé ; il peut aussi être dédommager si le projet ne lui convient pas. 
+Un client peut annuler sa commande et être remboursé ; il peut aussi être dédommagé si le produit ne lui convient pas. 
 
 Enfin, nos clients peuvent attribuer une note au produits achetés.
 
@@ -54,7 +55,7 @@ Initialise les tables et lance la requête 1.
 
 ### CSV
 
-Contenu des tables
+Contenu des tables en format CSV. Les sources sont indiquées [ici](#sources).
 
 ## init
 
