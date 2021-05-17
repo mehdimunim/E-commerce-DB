@@ -7,7 +7,7 @@ Les différentes tables et leurs attributs classé par ordre de complexité (nom
 
 > Les clients dans la base de données
 
-* __id du client__
+* `id du client`
 
 * Mail 
 
@@ -27,7 +27,7 @@ Aucun des attributs n'est nul.
 
 * Titre original
 
-* __ISBN__ **PK**
+* `ISBN` **PK**
 
 * Genre
 
@@ -51,9 +51,9 @@ Aucun des attributs n'est nul.
 
 ### Numéros d'un périodique
 
-* __SICI__
+* `SICI`
 
-* __Numéro dans la série__
+* `Numéro dans la série`
 
 * Date
 
@@ -77,11 +77,11 @@ Aucun des attributs n'est nul.
 
 > Les notations des produits par les clients
 
-* __id du produit__
+* `id du produit`
 
-* __Type de produit__
+* `Type de produit`
 
-* __Id du client__
+* `Id du client`
 
 * Note **Entre 0 et 10**
 
@@ -93,11 +93,11 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > Différents prix par prix au cours des jours
 
-* __Type de produit__ **FK Périodiques(type du périodique) UNION {livre}**
+* `Type de produit` **FK Périodiques(type du périodique) UNION {livre}**
 
-* __Id du produit__ **FK Livres(ISBN) UNION Periodiques(SICI)**
+* `Id du produit` **FK Livres(ISBN) UNION Periodiques(SICI)**
 
-* __Date__
+* `Date`
 
 * Prix
 
@@ -105,9 +105,9 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > Le produit physique tel que stocké dans l'entrepôt
 
-* __Type de produit__ **FK Périodiques(type du périodique) UNION {livre}**
+* `Type de produit` **FK Périodiques(type du périodique) UNION {livre}**
 
-* __Id du produit__ **FK Périodiques(SICI) UNION Livres(ISBN)**
+* `Id du produit` **FK Périodiques(SICI) UNION Livres(ISBN)**
 
 * Disponibile ? **dans Oui/Non**
 
@@ -119,7 +119,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > Liste des produits dans chaque panier pour chaque client
 
-* __Id panier__ *identifiant unique pour les paniers*
+* `Id panier` *identifiant unique pour les paniers*
 
 * Id client **FK Clients(id_clients)**
 
@@ -133,7 +133,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > L'ensemble des commandes validées par les clients. Elles correpond donc à un panier de la base de données.
 
-* __id commande__ 
+* `id commande` 
 
 * Date de commande **FK commandes(date)**
 
@@ -145,13 +145,13 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > Les différents produits dans la commande pour chaque client
 
-* __Id commande__ **FK Contenu des commandes(id commandes)**
+* `Id commande` **FK Contenu des commandes(id commandes)**
 
-* __id du client__ **FK Client(id client)**
+* `id du client` **FK Client(id client)**
 
-* __id du produit__ **FK Livres(ISBN) UNION Periodiques(SICI)**
+* `id du produit` **FK Livres(ISBN) UNION Periodiques(SICI)**
 
-* __Type de produit__ **type de périodique ou livre**
+* `Type de produit` **type de périodique ou livre**
 
 * Date de commande
 
@@ -163,7 +163,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > L'état physique des commandes validées
 
-* __Id commande__ **FK Contenu des commandes(id commandes)**
+* `Id commande` **FK Contenu des commandes(id commandes)**
 
 * Id du client **FK commandes(id client)**
 
@@ -185,11 +185,11 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > Les produits retournées par les clients
 
-* __id du client__ **FK Contenu commande(id client)**
+* `id du client` **FK Contenu commande(id client)**
 
-* __id du produit__ **FK Contenu commande(id produit)**
+* `id du produit` **FK Contenu commande(id produit)**
 
-* __Type de produit__ 
+* `Type de produit` 
 
 * Date de commande **FK Contenu commande(date commande)**
 
