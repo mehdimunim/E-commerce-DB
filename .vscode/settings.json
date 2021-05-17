@@ -10,5 +10,6 @@
             "database": "mehdi",
             "username": "mehdi"
         }
-    ]
+    ],
+    "python.pythonPath": "/usr/bin/python3.7"
 }

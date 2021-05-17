@@ -98,7 +98,8 @@ Requêtes SQL
 
 
 ## Sources
-* Pour la table livre.csv : ...
+* Pour la table livre.csv : données remplies à l'aide du site GoodReads.
+* Pour la table clients.csv : données générées à 10 reprises avec [generatedata](http://www.generatedata.com/) puis légèrement modifiées.
 
 
 ## License 
