@@ -14,7 +14,8 @@
 
 ## Equipe
 
-Mamadou DANSOKHO [num etudiant]
+Mamadou DANSOKHO 21964189
+
 
 Mehdi MUNIM 21964021
 
