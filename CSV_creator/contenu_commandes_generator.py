@@ -4,15 +4,19 @@ from common import rand_price
 from common import get_column
 
 
-def historique_prix_generator():
+def contenu_commandes_generator():
     """
-    Generate historique_prix.csv
+    Generate contenu_commandes.csv
 
     """
-    header = ["Id_prod",
-              "Date", "Prix"]
+    header = ["Id commande", "Id Client", "Id produit",
+              "Date commande", "Etat produit", "Quantité"]
 
     # Id Prod is FK from Livres UNION Périodiques
+    ids_commande = get_column("ID", "CSV/commandes.csv")
+
+    ids_client = [i+1 for i in range(1000)]
+
     ids_prod = get_column("ID", "CSV/livres.csv")
     #ids_prod += get_column("SICI", "CSV/periodiques.csv")
 
@@ -20,7 +24,8 @@ def historique_prix_generator():
     dates = ["17/05/2021", "18/05/2021",
              "19/05/2021", "20/05/2021", "21/05/2021"]
 
-    with open("CSV/historique_prix.csv", "w", encoding="UTF8") as f:
+    etat = ["disponible", "livré"]
+    with open("CSV/contenu_commandes.csv", "w", encoding="UTF8") as f:
         writer = csv.writer(f)
 
         writer.writerow(header)
@@ -36,4 +41,4 @@ def historique_prix_generator():
                 writer.writerow(row)
 
 
-historique_prix_generator()
+contenu_commandes_generator()

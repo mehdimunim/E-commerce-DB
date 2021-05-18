@@ -81,11 +81,9 @@ Aucun des attributs n'est nul.
 
 > Les notations des produits par les clients.
 
-* `id du produit`
+* `id du produit` **FK Id Périodique ou Livre**
 
-* `Type de produit`
-
-* `Id du client`
+* `Id du client` **FK Clients(id)**
 
 * Note **Entre 0 et 10**
 
@@ -97,9 +95,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > Les différents prix des produits au cours des jours.
 
-* `Type de produit` **FK Périodiques(type du périodique) UNION {livre}**
-
-* `Id du produit` **FK Livres(ISBN) UNION Periodiques(SICI)**
+* `Id du produit` **FK Livres(Id) UNION Periodiques(Id)**
 
 * `Date`
 
@@ -109,9 +105,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > Le produit physique tel que stocké dans l'entrepôt
 
-* `Type de produit` **FK Périodiques(type du périodique) UNION {livre}**
-
-* `Id du produit` **FK Périodiques(SICI) UNION Livres(ISBN)**
+* `Id du produit` **FK Périodiques(Id) UNION Livres(Id)**
 
 * Disponibile ? **dans Oui/Non**
 
@@ -127,9 +121,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 * Id client **FK Clients(id_clients)**
 
-* Id du produit **FK Périodiques(SICI) UNION Livres(ISBN)** 
-
-* Type de produit **FK Périodiques(type) UNION {livre}**
+* Id du produit **FK Périodiques(Id) UNION Livres(Id)** 
 
 * Nombre d'items du produit **>= 0** **Inférieur au nombre d'item du produit indiqué dans Produits effectifs**
 
@@ -137,7 +129,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 > L'ensemble des commandes validées par les clients. Elles correspond donc à un panier de la base de données.
 
-* `id commande` 
+* `id commande`
 
 * Date de commande **FK commandes(date)**
 
@@ -153,9 +145,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 * `id du client` **FK Client(id client)**
 
-* `id du produit` **FK Livres(ISBN) UNION Periodiques(SICI)**
-
-* `Type de produit` **type de périodique ou livre**
+* `id du produit` **FK Livres(Id) UNION Periodiques(Id)**
 
 * Date de commande
 
@@ -190,8 +180,6 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 * `id du client` **FK Contenu commande(id client)**
 
 * `id du produit` **FK Contenu commande(id produit)**
-
-* `Type de produit` 
 
 * Date de commande **FK Contenu commande(date commande)**
 
