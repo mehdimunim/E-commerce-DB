@@ -1,0 +1,21 @@
+id du client," id du produit"," date de commande"," motif"," montant",
+1,"4",,"""produit moche""",
+2,"5",,"""le livre ne m'a pas plu""","1"
+3,"6",,"""le livre ne convenait pas à mon âge. J'ai 13 ans...""","4"
+4,"7",,"""livre abîmé""","5"
+5,"8",,"""le livre ne m'a pas plu""","6"
+6,"9",,"""Juste nul""","4"
+7,"10",,"""produit moche""","4"
+8,"11",,"""livre abîmé""","4"
+9,"12",,"""Quel ***""","4"
+10,"13",,"""livre abîmé""","4"
+11,"14",,"""livre abîmé""","4"
+12,"15",,"""Quel ***""","4"
+13,"16",,"""produit moche""","4"
+14,"17",,"""le livre ne m'a pas plu""","1"
+15,"18",,"""livre abîmé""","1"
+16,"19",,"""le livre ne m'a pas plu""","1"
+17,"20",,"""produit moche""","1"
+18,"21",,"""Juste nul""","1"
+19,"22",,"""produit moche""","1"
+20,"23",,"""Quel ***""",
