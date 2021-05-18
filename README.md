@@ -3,6 +3,7 @@
  > Projet de Base Donnée : modéliser, créer un site de commerce, pour y faire des requêtes SQL
 
 ## Table des matières
+
 * [Equipe](#equipe)
 * [Description](#description)
 * [Fonctionnalités](#fonctionnalités)
@@ -15,7 +16,6 @@
 ## Equipe
 
 Mamadou DANSOKHO 21964189
-
 
 Mehdi MUNIM 21964021
 
@@ -34,6 +34,7 @@ Un client peut annuler sa commande et être remboursé ; il peut aussi être dé
 Enfin, nos clients peuvent attribuer une note au produits achetés.
 
 ## Fonctionnalités
+
 * Créé les tables correspondant à une modélisation
 * Remplit les tables grâce aux fichiers CSV
 * Peut effectuer des requêtes fixées à l'avance.
@@ -93,17 +94,18 @@ Requêtes SQL
 
 ## Exemples
 
-
 ## Technologies
+
 * postgresql
 
-
 ## Sources
+
 * Pour la table livre.csv : données remplies à l'aide du site GoodReads.
 * Pour la table clients.csv : données générées à 10 reprises avec [generatedata](http://www.generatedata.com/) puis légèrement modifiées.
 
 
 ## License 
+
 MIT License 
 
 Copyright c - Mehdi MUNIM, Mamadou DANSOKHO

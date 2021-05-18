@@ -1,15 +1,15 @@
 
 # Modélisation en schéma relationnel
 
-Les différentes tables et leurs attributs classé par ordre de complexité (nombre de clés étrangères)
+Les différentes tables et leurs attributs. Pour les produits, nous avons choisi de garder un id unique personnalisé, différent de l'ISBN ou du SICI car c'est plus pratique et c'est la solution retenue par Amazon ou Goodreads. Attribut en couleur : clé primaire, texte en gras : contraintes et remarques, **FK** : Foreign Key (clé étrangère).
 
 ## Clients
 
-> Les clients dans la base de données
+> Les clients dans la base de données.
 
 * `id du client`
 
-* Mail 
+* Mail
 
 * Prénom
 
@@ -23,11 +23,13 @@ Aucun des attributs n'est nul.
 
 ## Livres
 
+* `Id` **Disjoint de Périodiques(Id)**
+
 * Titre **non nul**
 
 * Titre original
 
-* `ISBN` **PK**
+* ISBN
 
 * Genre
 
@@ -51,9 +53,11 @@ Aucun des attributs n'est nul.
 
 ## Numéros d'un périodique
 
-* `SICI`
+* `Id` **Disjoint de Livres(Id)**
 
-* `Numéro dans la série`
+* SICI
+
+* Numéro dans la série
 
 * Date
 
@@ -75,7 +79,7 @@ Aucun des attributs n'est nul.
 
 ## Notations
 
-> Les notations des produits par les clients
+> Les notations des produits par les clients.
 
 * `id du produit`
 
@@ -91,7 +95,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 ## Historique des prix
 
-> Différents prix des produits au cours des jours
+> Les différents prix des produits au cours des jours.
 
 * `Type de produit` **FK Périodiques(type du périodique) UNION {livre}**
 
@@ -99,9 +103,9 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 * `Date`
 
-* Prix
+* Prix unitaire
 
-### Produits effectifs
+## Produits effectifs
 
 > Le produit physique tel que stocké dans l'entrepôt
 
@@ -117,7 +121,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 ## Contenu des paniers
 
-> Liste des produits dans chaque panier pour chaque client
+> Liste des produits dans chaque panier pour chaque client.
 
 * `Id panier` *identifiant unique pour les paniers*
 
@@ -131,7 +135,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 ## Commandes
 
-> L'ensemble des commandes validées par les clients. Elles correpond donc à un panier de la base de données.
+> L'ensemble des commandes validées par les clients. Elles correspond donc à un panier de la base de données.
 
 * `id commande` 
 
@@ -143,7 +147,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 ## Contenu des commandes
 
-> Les différents produits dans la commande pour chaque client
+> Les différents produits dans la commande pour chaque client.
 
 * `Id commande` **FK Contenu des commandes(id commandes)**
 
@@ -161,7 +165,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 ## Commandes effectives
 
-> L'état physique des commandes validées
+> L'état physique des commandes validées.
 
 * `Id commande` **FK Contenu des commandes(id commandes)**
 
@@ -181,7 +185,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 ## Contenu commandes retournées
 
-> Les produits retournées par les clients
+> Les produits retournés par les clients.
 
 * `id du client` **FK Contenu commande(id client)**
 
