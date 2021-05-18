@@ -49,7 +49,7 @@ Aucun des attributs n'est nul.
 
 * Traducteur
 
-### Numéros d'un périodique
+## Numéros d'un périodique
 
 * `SICI`
 
@@ -73,7 +73,7 @@ Aucun des attributs n'est nul.
 
 * Public destiné
 
-### Notations
+## Notations
 
 > Les notations des produits par les clients
 
@@ -89,9 +89,9 @@ Aucun des attributs n'est nul.
 
 Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
-### Historique des prix
+## Historique des prix
 
-> Différents prix par prix au cours des jours
+> Différents prix des produits au cours des jours
 
 * `Type de produit` **FK Périodiques(type du périodique) UNION {livre}**
 
@@ -115,7 +115,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 * Nombre d'items **>= 0**
 
-### Contenu des paniers
+## Contenu des paniers
 
 > Liste des produits dans chaque panier pour chaque client
 
@@ -129,7 +129,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 * Nombre d'items du produit **>= 0** **Inférieur au nombre d'item du produit indiqué dans Produits effectifs**
 
-### Commandes
+## Commandes
 
 > L'ensemble des commandes validées par les clients. Elles correpond donc à un panier de la base de données.
 
@@ -141,7 +141,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 * id du client **FK commandes(id client)**
 
-### Contenu des commandes
+## Contenu des commandes
 
 > Les différents produits dans la commande pour chaque client
 
@@ -159,7 +159,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 * Nombre d'items du produit **Inférieur au nombre d'item du produit indiqué dans Produits effectifs**
 
-### Commandes effectives
+## Commandes effectives
 
 > L'état physique des commandes validées
 
@@ -179,9 +179,7 @@ Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
 * effectivement payé ? **dans Oui/ Non**
 
-
-
-### Contenu commandes retournées
+## Contenu commandes retournées
 
 > Les produits retournées par les clients
 
