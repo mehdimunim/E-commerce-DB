@@ -1,7 +1,9 @@
 
 # Modélisation en schéma relationnel
 
-Les différentes tables et leurs attributs. Pour les produits, nous avons choisi de garder un id unique personnalisé, différent de l'ISBN ou du SICI, car plus court et intuitif. Attribut en couleur : clé primaire, texte en gras : contraintes et remarques, **FK** : Foreign Key (clé étrangère).
+Les différentes tables et leurs attributs. Pour les produits, nous avons choisi de garder un id unique personnalisé, différent de l'ISBN ou du SICI, car plus court et intuitif. 
+
+`Attribut en couleur` : clé primaire ; **texte en gras** : contraintes et remarques ; **FK** : Foreign Key (clé étrangère).
 
 ## Client
 
@@ -57,31 +59,37 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * Traducteur
 
-## Numéro d'un périodique
+## Periodique
 
-* `Id` **FK Produit(Id)**
+> Un périodique désigne une publication qui parait à une fréquence constante. Sont par exemple des publications periodiques : un quotidien (parait tout les jours), un hebdomadaire (paraît toutes les semaines) ou un bimestriel (paraît tous les deux mois).
 
-* SICI **non nul**
+* `ISSN`
 
-* Numéro dans la série **non nul**
+* Titre **non nul**
 
-* Date
-
-* Support
-
-* Liste des contributeurs
-
-* Titre du périodique
-
-* ISSN du périodique
-
-* Type du périodique
+* Periodicite
 
 * Langue
 
-* Sujet abordé ou spécialisation
+* Pays
 
-* Public destiné
+* Ville d'édition
+
+* Genre
+
+* Rédacteur en chef
+
+## Numéro d'un périodique
+
+> Le couple (ISSN, numéro) est unique.
+
+* `Id` **FK Produit(Id)**
+
+* ISSN du périodique **FK Periodique(Id)**
+
+* Numéro dans la série **=> 1**
+
+* Date
 
 ## Produit effectif
 
@@ -193,4 +201,4 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * Note **Entre 1 et 10 inclus**
 
-* Avis (sous forme d'un court texte)
+* Avis **Sous forme d'un court texte**
