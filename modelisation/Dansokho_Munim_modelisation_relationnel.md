@@ -121,7 +121,7 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 ## Commande
 
-> L'ensemble des commandes validées par les clients. Elles correspond donc à un panier de la base de données.
+> L'ensemble des commandes faites par les clients, qui correspond donc à un panier de la base de données.
 
 * `id commande`
 
@@ -129,7 +129,23 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * Id du panier **FK Panier(Id du panier)**
 
-* id du client **FK Commande(Id client)**
+* id du client **FK Client(Id client)**
+
+* adresse de livraison **non nul**
+
+* prix de la commande
+
+* mode payement **dans "chèque" U "CB" U "espèces"**
+
+* effectivement payé ? **dans "Oui" U "Non"**
+
+## Commandes annulées
+
+> L'ensemble des commandes annulées.
+
+* `id commande` **FK Commande(Id commande)**
+
+* Date d'annulation **Supérieure à Commande(date de commande)**
 
 ## Produit commandé
 
@@ -139,33 +155,19 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * `Id commande` **FK Commande(id de commande)**
 
-* `id du client` **FK Client(id du client)**
-
-* Date de commande **FK Commande(date)**
-
-* Etat effectif du produit
-
 * Nombre d'items du produit **La somme des items pour un produit est inférieur au nombre d'items dans produit effectif**
 
-## Commande effective
+## Produit livré
 
-> L'état physique des commandes validées.
+> Les produits effectivement livrés. La livraison d'une certaine quantité peut s'effectuer en plusieurs fois.
 
-* `Id commande` **FK Produit commandé(id commandes)**
+* `id du produit` **FK Produit commandé(Id)**
 
-* Id du client **FK Commande(id client)**
+* `Id commande` **FK Produit commandé(Id de commande)**
 
-* Date de commande **FK Produit commandé(date de commande)**
+* `Date de livraison effective` **Supérieur à la date de commande**
 
-* Etat de la commande **dans Livré/En cours**
-
-* adresse de livraison **non nul**
-
-* prix de la commande
-
-* mode payement **dans chèque/ CB/ espèces**
-
-* effectivement payé ? **dans Oui/ Non**
+* Quantité livrée **Inférieur à Produit commandé(nombre d'items)**
 
 ## Produit retourné
 
