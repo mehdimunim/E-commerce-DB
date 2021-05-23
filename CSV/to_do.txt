@@ -13,5 +13,5 @@
 11. produit_dans_panier                      A VERIFIER   
 12. produit_effectif                         A VERIFIER 
 13. produit_retourne                         A COMPLETER AVEC PERIODIQUE    
-14. produit                                  A FAIRE
+14. produit                                  OK
 
