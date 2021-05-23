@@ -1,0 +1,17 @@
+        TABLE                              STATUT
+
+1.  client                                   OK
+2.  commande_effective                       A FAIRE
+3.  commande                                 A VERIFIER   
+4.  historique_des_prix                      OK
+5.  livre                                    OK
+6.  notation                                 A FAIRE   
+7.  numero_periodique                        OK
+8.  panier                                   A FAIRE
+9.  periodique                               OK
+10. produit_commande                         A FAIRE   
+11. produit_dans_panier                      A FAIRE   
+12. produit_effectif                         A FAIRE   
+13. produit_retourne                         A COMPLETER AVEC PERIODIQUE    
+14. produit                                  A FAIRE
+
