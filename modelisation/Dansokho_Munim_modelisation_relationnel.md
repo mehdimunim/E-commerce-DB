@@ -117,7 +117,7 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * `Id panier` **FK Panier(Id)**
 
-* Nombre d'items du produit **>= 0 ET Inférieur au nombre d'item du produit indiqué dans Produit effectif**
+* Nombre d'items du produit **>= 0**
 
 ## Commande
 

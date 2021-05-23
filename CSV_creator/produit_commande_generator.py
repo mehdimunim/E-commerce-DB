@@ -1,11 +1,10 @@
 import csv
 import context
-from common import rand_price
 from common import get_column
 import random
 
 
-def contenu_commandes_generator():
+def produit_commande():
     """
     Generate contenu_commandes.csv
 
@@ -39,4 +38,4 @@ def contenu_commandes_generator():
                 writer.writerow(row)
 
 
-contenu_commandes_generator()
+produit_commande()
