@@ -1,7 +1,7 @@
 
 # Modélisation en schéma relationnel
 
-Les différentes tables et leurs attributs. Pour les produits, nous avons choisi de garder un id unique personnalisé, différent de l'ISBN ou du SICI, car plus court et intuitif. 
+Les différentes tables et leurs attributs. Pour les produits, nous avons choisi de garder un id unique personnalisé, différent de l'ISBN ou de l'ISSN, car plus court et intuitif.
 
 `Attribut en couleur` : clé primaire ; **texte en gras** : contraintes et remarques ; **FK** : Foreign Key (clé étrangère).
 
