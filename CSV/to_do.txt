@@ -5,13 +5,13 @@
 3.  commande                                 A VERIFIER   
 4.  historique_des_prix                      OK
 5.  livre                                    OK
-6.  notation                                 A FAIRE   
+6.  notation                                 A VERIFIER
 7.  numero_periodique                        OK
 8.  panier                                   A FAIRE
 9.  periodique                               OK
 10. produit_commande                         A FAIRE   
-11. produit_dans_panier                      A FAIRE   
-12. produit_effectif                         A FAIRE   
+11. produit_dans_panier                      A VERIFIER   
+12. produit_effectif                         A VERIFIER 
 13. produit_retourne                         A COMPLETER AVEC PERIODIQUE    
 14. produit                                  A FAIRE
 
