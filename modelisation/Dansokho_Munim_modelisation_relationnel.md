@@ -139,7 +139,7 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * effectivement payé ? **dans "Oui" U "Non"**
 
-## Commandes annulées
+## Commande annulée
 
 > L'ensemble des commandes annulées.
 

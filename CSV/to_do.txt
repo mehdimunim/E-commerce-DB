@@ -1,17 +1,18 @@
         TABLE                              STATUT
 
 1.  client                                   OK
-2.  commande_effective                       A FAIRE
-3.  commande                                 A VERIFIER   
-4.  historique_des_prix                      OK
-5.  livre                                    OK
-6.  notation                                 A VERIFIER
-7.  numero_periodique                        OK
-8.  panier                                   A FAIRE
-9.  periodique                               OK
-10. produit_commande                         A FAIRE   
-11. produit_dans_panier                      A VERIFIER   
-12. produit_effectif                         A VERIFIER 
-13. produit_retourne                         A COMPLETER AVEC PERIODIQUE    
-14. produit                                  OK
+2.  commande_annulee                         A FAIRE
+3.  commande_effective                       A FAIRE
+4.  commande                                 A VERIFIER   
+5.  historique_des_prix                      OK
+6.  livre                                    OK
+7.  notation                                 A VERIFIER
+8.  numero_periodique                        OK
+9.  panier                                   A FAIRE
+10. periodique                               OK
+11. produit_commande                         OK  
+12. produit_dans_panier                      A VERIFIER   
+13. produit_effectif                         A VERIFIER (Tricher avec produit_commande pour les quantités)
+14. produit_retourne                         A COMPLETER AVEC PERIODIQUE    
+15. produit                                  OK
 
