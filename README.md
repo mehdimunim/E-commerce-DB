@@ -31,9 +31,9 @@ Les prix peuvent évoluer au cours du temps, c'est pour cela qu'on en garde une 
 
 Nos clients entrent des informations personnelles dans le système. Il peuvent commander plusieurs produits, pourvus qu'ils soient disponibles. 
 
-Un client peut annuler sa commande et être remboursé ; il peut aussi être dédommagé si le produit ne lui convient pas. 
+Un client peut annuler sa commande et être remboursé ; il peut aussi être dédommagé si le produit ne lui convient pas.
 
-Enfin, nos clients peuvent attribuer une note au produits achetés.
+Enfin, nos clients peuvent attribuer une note aux produits achetés.
 
 ## Fonctionnalités
 
@@ -63,7 +63,7 @@ Contenu des tables en format CSV. Les sources sont indiquées [ici](#sources).
 
 ## init
 
-Commande SQL pour initialiser les tables
+Commandes SQL pour initialiser les tables
 
 ## modelisation
 

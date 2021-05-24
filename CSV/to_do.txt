@@ -13,6 +13,6 @@
 11. produit_dans_panier                      OK mais supprimer des entrées par rapport à commande   
 12. produit_effectif                         OK
 13. produit_livre                            OK
-13. produit_retourne                         OK    
-14. produit                                  OK
+14. produit_retourne                         OK    
+15. produit                                  OK
 
