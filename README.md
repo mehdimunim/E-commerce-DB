@@ -19,6 +19,8 @@ Mamadou DANSOKHO 21964189
 
 Mehdi MUNIM 21964021
 
+Lauréna PORCEL (?) [num étudiant]
+
 ## Description
 
 Dans ce projet, on modélise un site de e-commerce. 
