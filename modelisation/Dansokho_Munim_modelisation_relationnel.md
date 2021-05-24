@@ -85,7 +85,7 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * `Id` **FK Produit(Id)**
 
-* ISSN du périodique **FK Periodique(Id)**
+* ISSN du périodique **FK Periodique(ISSN)**
 
 * Numéro dans la série **=> 1**
 

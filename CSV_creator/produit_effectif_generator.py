@@ -20,7 +20,7 @@ def produit_effectif():
     # loop over ids_commande to respect FK constraint
 
     for i, id_prod in enumerate(ids_prod):
-        if id_prod in dic:
+        if id_prod in dic.keys():
             dic[id_prod] += int(quantites_par_commande[i])+1
         else:
             dic.update({id_prod: 0})
@@ -29,7 +29,7 @@ def produit_effectif():
         writer = csv.writer(file)
         writer.writerow(header)
         for key, value in enumerate(dic):
-            row = [key, "Oui", 0, value]
+            row = [int(key)+1, "Oui", 0, value]
             writer.writerow(row)
 
 
