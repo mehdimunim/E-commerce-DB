@@ -19,7 +19,7 @@ Mamadou DANSOKHO 21964189
 
 Mehdi MUNIM 21964021
 
-Lauréna PORCEL (?) [num étudiant]
+Lauréna PORCEL [num étudiant]
 
 ## Description
 

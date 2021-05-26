@@ -2,7 +2,7 @@
 
 /* Remplit la table livres*/
 
-COPY livres
+COPY livre
 FROM '/home/mehdi/E-commerce-DB-1/CSV/livres.csv'
 DELIMITER ',' CSV HEADER;
 
