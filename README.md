@@ -111,4 +111,4 @@ Requêtes SQL
 
 MIT License 
 
-Copyright c - Mehdi MUNIM, Mamadou DANSOKHO
+Copyright c - Mehdi MUNIM, Mamadou DANSOKHO, Lauréna PORCEL
