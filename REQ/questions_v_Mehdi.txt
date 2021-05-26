@@ -1,0 +1,54 @@
+Questions 
+
+20 questions à faire chacun de son côté
+
+
+1) Req sur trois tables
+
+client
+livre
+commande
+
+> Les clients qui ont acheté des livres en VO autre que Français.
+
+2) Auto-jointure
+
+> les livres qui existent à la fois en version original et traduite dans la base de données
+
+3) Sous-requête corrélée
+
+> Les livres qui ont été vendu 2 fois
+
+4) sous-rq dans FROM
+
+> Les commandes terminées avec plus de périodiques que de livre
+
+5) sous-rq dans WHERE
+
+> Les clients qui ont acheté des livres traduits
+
+6)  deux agrégats avec GROUP BY et HAVING
+
+> Les livres les mieux vendus (le plus de commande)
+
+> Les livres où il y a le plus de désistement
+
+7) moyennes d'un ensemble de maxiums
+
+> La moyenne des meilleurs ventes par genre.
+
+8) deux requêtes équivalentes exprimant une condition de totalité, l’une avec des sous-requêtes corrélée, l'autre avec de l'aggrégation
+
+> Les dates pour lesquels un maximum de livre à été commandé (avec aggrégation)
+
+9) une jointure externe (LEFT JOIN, RIGHT JOIN ou FULL JOIN) ;
+
+> Les avis pour les produits en notatn le titre
+
+10) deux requêtes qui renverraient le même résultat si vos tables de contenaient pas
+de nulls, mais qui renvoient des résultats différents ici (vos données devront donc
+contenir quelques nulls), vous proposerez également de petites modifications de vos
+requêtes (dans l’esprit de ce qui a été présenté en cours) afin qu’elles retournent le
+même résultat
+
+> Les numéros de périodiques les plus anciens
