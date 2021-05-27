@@ -1,21 +1,112 @@
 Questions 
 
-20 questions chacun
+20 questions à faire chacun de son côté
 
 
-# Req sur trois tables
+1) Req sur trois tables
 
 client
 livre
-commande
+produit_commande
 
-# Auto-jointure
+> Les clients qui ont commandé "Le Rouge et le Noir"
 
-livre ???
+SELECT prenom_client, nom_client
+FROM client, livre, commande, produit_commande
+WHERE  
+produit_commande.id_commande = commande.id_commande
+AND
+commande.id_client = client.id_client
+AND
+produit_commande.id_produit = livre.ID
+AND
+livre.TITRE = "Le Rouge et le Noir"
+;
 
-# Sous-requête corrélée
+2) Auto-jointure
 
-sous-rq dans FROM
+> les livres qui existent à la fois en version original et traduite dans la base de données
 
-sous-rq dans WHERE
+SELECT titre
+FROM livre AS l1, livre AS l2
+WHERE l1.titre = l2.titre_original
+;
+
+3) Sous-requête corrélée
+
+> Les livres qui sont notés positivement par tous les clients
+
+SELECT titre
+FROM livre, notation, 
+WHERE 
+notation.id = livre.id
+AND 
+NOT EXIST 
+( SELECT id_client
+    FROM notation
+    WHERE notation.note < 5)
+;
+
+4) sous-rq dans FROM
+
+> Le nombre maximal de livres dans chaque commande
+
+SELECT MAX(nb_produit)
+FROM 
+(SELECT COUNT(id_produit) AS nb_produit
+FROM produit_commande, produit
+WHERE produit.id =  produit_commande.id
+AND 
+produit.genre = "livre"
+GROUP BY id_commande
+) AS S;
+
+5) sous-rq dans WHERE
+
+> Les clients qui ont acheté des livres traduits
+
+SELECT nom, prenom
+FROM client 
+WHERE 
+client.id IN  
+(   
+    /* client ayant commandé des livres traduits */
+    SELECT commande.id_client
+    FROM commande, produit_commande
+    WHERE commande.id_commande = produit_commande.id_commande
+    AND 
+    produit_commande.id IN
+    /* livre traduits */
+    (   SELECT livre.id
+        FROM livre
+        WHERE livre.Traducteur IS NOT NULL  
+        ):
+
+);
+
+6)  deux agrégats avec GROUP BY et HAVING
+
+> Les livres les mieux vendus (le plus de commande)
+
+> Les livres où il y a le plus de désistement
+
+7) moyennes d'un ensemble de maxiums
+
+> La moyenne des meilleurs ventes par genre.
+
+8) deux requêtes équivalentes exprimant une condition de totalité, l’une avec des sous-requêtes corrélée, l'autre avec de l'aggrégation
+
+> Les dates pour lesquels un maximum de livre à été commandé (avec aggrégation)
+
+9) une jointure externe (LEFT JOIN, RIGHT JOIN ou FULL JOIN) ;
+
+> Les avis pour les produits en affichant aussi le titre
+
+10) deux requêtes qui renverraient le même résultat si vos tables de contenaient pas
+de nulls, mais qui renvoient des résultats différents ici (vos données devront donc
+contenir quelques nulls), vous proposerez également de petites modifications de vos
+requêtes (dans l’esprit de ce qui a été présenté en cours) afin qu’elles retournent le
+même résultat
+
+> Les numéros de périodiques les plus anciens
 
