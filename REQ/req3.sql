@@ -2,12 +2,12 @@
 /* Les livres qui sont notés positivement par tous les clients */
 
 SELECT titre
-FROM livre, notation, 
+FROM livre, notation 
 WHERE 
-notation.id = livre.id
+notation.id_produit = livre.id_livre
 AND 
-NOT EXIST 
+NOT EXISTS 
 ( SELECT id_client
     FROM notation
-    WHERE notation.note < 5)
+    WHERE note <= 5)
 ;

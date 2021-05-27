@@ -20,9 +20,9 @@ DROP TABLE IF EXISTS notation CASCADE;
 
 CREATE TABLE client(
     id_client INTEGER PRIMARY KEY,
-    mail TEXT NOT NULL,
     prenom TEXT NOT NULL,
     nom TEXT NOT NULL,
+    mail TEXT NOT NULL,
     adresse TEXT NOT NULL,
     telephone VARCHAR(20) NOT NULL
 ); 
