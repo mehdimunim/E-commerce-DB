@@ -22,8 +22,8 @@ CREATE TABLE client(
     id_client INTEGER PRIMARY KEY,
     prenom TEXT NOT NULL,
     nom TEXT NOT NULL,
-    mail TEXT NOT NULL,
     adresse TEXT NOT NULL,
+    mail TEXT NOT NULL,
     telephone VARCHAR(20) NOT NULL
 ); 
 
@@ -111,8 +111,8 @@ CREATE TABLE commande_annulee(
 );
 
 CREATE TABLE produit_commande(
-    id_produit INTEGER REFERENCES produit(id_produit),
-    id_commande INTEGER REFERENCES commande(id_commande),
+    id_commande INTEGER REFERENCES produit(id_produit),
+    id_produit INTEGER REFERENCES commande(id_commande),
     quantite INTEGER,
     PRIMARY KEY (id_produit, id_commande)
 );

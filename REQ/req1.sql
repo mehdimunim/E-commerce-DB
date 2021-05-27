@@ -1,7 +1,8 @@
 /* Requêtes sur trois tables */
 /* Les clients qui ont commandé "Le Rouge et le Noir" */
 
-SELECT prenom, nom
+\! echo "\nLes clients qui ont commandé \"Le Rouge et le Noir\"\n"
+SELECT prenom, nom, mail
 FROM client, livre, commande, produit_commande
 WHERE  
 produit_commande.id_commande = commande.id_commande

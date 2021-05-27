@@ -1,21 +1,24 @@
 /* sous-rq dans WHERE */
-/* Les clients qui ont acheté des livres traduits */
+/* Les clients qui ont acheté des livres en VO (donc non Français)*/
 
+\! echo "\nLes clients qui lisent Jane Austen en VO\n"
 SELECT nom, prenom
 FROM client 
 WHERE 
 client.id_client IN  
 (   
-    /* client ayant commandé des livres traduits */
-    SELECT commande.id_client
-    FROM commande, produit_commande
-    WHERE commande.id_commande = produit_commande.id_commande
+    /* clients ayant commandé des livres de Jane Austenen VO */
+    SELECT C.id_client 
+    FROM commande C, produit_commande P
+    WHERE C.id_commande = P.id_commande
     AND 
-    produit_commande.id_produit IN
-    /* livre traduits */
+    EXISTS
+    /* id des livre traduits */
     (   SELECT livre.id_livre
         FROM livre
-        WHERE livre.traducteur IS NOT NULL  
+        WHERE P.id_produit = livre.id_livre
+        AND langue = 'Anglais'
+        AND auteur = 'Jane Austen' 
         )
 
 );
