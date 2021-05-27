@@ -113,7 +113,7 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 > Liste des produits dans chaque panier pour chaque client.
 
-* Id du produit **FK Produit(Id)**
+* `Id du produit` **FK Produit(Id)**
 
 * `Id panier` **FK Panier(Id)**
 
@@ -173,7 +173,7 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 > Les produits retournés par les clients.
 
-* `id du client` **FK Produit commandé(id client)**
+* `id du client` **FK Client(id client)**
 
 * `id du produit` **FK Produit commandé(id produit)**
 
@@ -197,9 +197,9 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 > Les notations des produits par les clients. Le produit qui est noté par le client doit avoir été acheté par celui-ci
 
-* `id du produit` **FK Produit(Id)**
+* `id du produit` **FK Produit livré(Id)**
 
-* `Id du client` **FK Client(id)**
+* `Id du client` **FK Produit livré(id)**
 
 * Note **Entre 1 et 10 inclus**
 
