@@ -1,6 +1,5 @@
 /* Script pour remplir les tables grâce au CSV*/
 
-/* Remplit la table livres*/
 \! echo "\nREMPLISSAGE AVEC LES CSV\n"
 
 \COPY client from 'CSV/client.csv' WITH (FORMAT CSV, HEADER);
