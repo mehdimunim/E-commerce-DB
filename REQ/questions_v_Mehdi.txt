@@ -82,7 +82,7 @@ client.id IN
         WHERE livre.Traducteur IS NOT NULL  
         ):
 
-);
+)
 
 6)  deux agrégats avec GROUP BY et HAVING
 
