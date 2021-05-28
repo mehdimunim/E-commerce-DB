@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 /* Script pour remplir les tables grâce au CSV*/
 
 /* Remplit la table livres*/
-
-COPY livre
-FROM '/home/mehdi/E-commerce-DB-1/CSV/livres.csv'
-DELIMITER ',' CSV HEADER;
-
-=======
 \! echo "\nREMPLISSAGE AVEC LES CSV\n"
 
 \COPY client from 'CSV/livre.csv' WITH (FORMAT CSV, HEADER);
@@ -25,4 +18,3 @@ DELIMITER ',' CSV HEADER;
 \COPY produit_livre from 'CSV/produit_livre.csv' WITH (FORMAT CSV, HEADER);
 \COPY produit_retourne from 'CSV/produit_retourne.csv' WITH (FORMAT CSV, HEADER);
 \COPY produit from 'CSV/produit.csv' WITH (FORMAT CSV, HEADER);
->>>>>>> parent of 52f2825 (Merge branch 'main' into Mehdi)
