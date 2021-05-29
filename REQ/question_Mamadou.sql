@@ -35,23 +35,42 @@
 
 
 
- /*Q.8 Lister tous les clients ayant effectuer une commande ou non et la liste de toutes les commandes associées à un client ou nom
+ /*Q.8 Lister tous les clients ayant effectuer une commande ou non et la liste de toutes les commandes associées à un client ou non
 
  SELECT prenom, nom, client.id_client,id_commande ,date_commande
  FROM client
- FULL JOIN commande ON client.id_client= commande.id_client;
+ NATURAL JOIN commande client.id_client= commande.id_client;
 
  /*Q.9
 
 
- /*Q10 Le pourcentage de livre commandé par les clients */
+ /*Q10 liste des livres qui ne sont commandé par aucun client */
 
- /*Q11 la nombre moyen de périodiques et de livre mis dans le panier par les clients */
+
+ SELECT id_livre 
+ FROM livre 
+ WHERE id_livre 
+ NOT IN ( SELECT id_produit
+          FROM produit_commande
+ );
+
+
+
+
+ 
+
+ /*Q11 la nombre total de périodique mis dans le panier pour chaque type */
+
+ SELECT  SUM(produit_dans_panier.quantite) AS "nombre total"
+ FROM produit_dans_panier,
+ WHERE produit
+
 
  /*Q12 le pourcentage de clients ayant passé une commande supérieur ou égale 50 euros*/
 
 
  /*Q13. Le prix moyen des produits */
+
 
  /*Q14 le produit le plus cher */
 
@@ -59,7 +78,15 @@
 
  /*Q16 le produit le mieux noté*/
 
- /*Q17 Le produit 
+ /*Q17 Les clients ayant apprécié les livres et detesté les périodiques*/
+
+ /*Q18 La note moyenne donnée aux produit */
+
+ /* Q19 le taux produit retourné */
+
+
+/*Q20 les clients ayant passé plus 10 commandes dont 3 livres et 7 périodiques*/
+
 
 
 
