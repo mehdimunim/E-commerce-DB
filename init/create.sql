@@ -25,7 +25,7 @@ CREATE TABLE client(
     nom TEXT NOT NULL,
     adresse TEXT NOT NULL,
     mail TEXT NOT NULL,
-    telephone VARCHAR(20) NOT NULL
+    telephone VARCHAR(20) NOT NULL,
 	date_naissance DATE,
     date_inscription DATE
 ); 
@@ -101,8 +101,8 @@ CREATE TYPE etat_commande AS ENUM ('en_attente','en_preparation', 'en_livraison'
 CREATE TABLE commande( 
     id_commande INTEGER PRIMARY KEY,
     date_commande VARCHAR(10),
-	id_prod INTEGER REFERENCES produit(id_produit),
     id_panier INTEGER REFERENCES panier(id_panier),
+	id_client INTEGER REFERENCES client(id_client),
     adresse_livraison TEXT NOT NULL,
     prix_commande NUMERIC,
     mode_payement TEXT,
@@ -151,11 +151,11 @@ CREATE TABLE historique_des_prix(
 
 /* Modifier les contraintes FK en accord avec la modélisation*/
 CREATE TABLE notation(
-    id_produit INTEGER REFERENCES produit_commande(id_produit),
+    id_produit INTEGER REFERENCES produit(id_produit),
     type_produit VARCHAR(20),
     id_client INTEGER REFERENCES client(id_client),
     note INTEGER,
     avis TEXT,
-    PRIMARY KEY (id_produit, id_client),
+    PRIMARY KEY (id_produit, id_client, note),
     CHECK (note BETWEEN 0 AND 10)
 );
