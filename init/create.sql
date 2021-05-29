@@ -37,7 +37,7 @@ CREATE TABLE produit(
 );
 
 
-CREATE TABLE livre (
+CREATE TABLE livre(
     id_livre INTEGER PRIMARY KEY,
     titre TEXT NOT NULL,
     titre_original TEXT,
@@ -97,7 +97,7 @@ CREATE TABLE produit_dans_panier(
     CHECK (quantite >=0)
 );
 
-CREATE TYPE etat_commande AS ENUM ('en_attente','en_preparation', 'en_livraison','livree','annulee');
+CREATE TYPE etat_commande AS ENUM ('en_attente','en_preparation', 'en_livraison','livree', 'annulee');
 CREATE TABLE commande( 
     id_commande INTEGER PRIMARY KEY,
     date_commande VARCHAR(10),
@@ -133,7 +133,7 @@ CREATE TABLE produit_livre(
     PRIMARY KEY (id_produit, id_commande, date_livraison_effective)
 );
 /*Peut-on mettre une FK avec produit commande ou commande(date commande) ?*/
-CREATE TABLE produit_retourne( 
+CREATE TABLE produit_retourne(
     id_client INTEGER REFERENCES client(id_client),
     id_produit INTEGER REFERENCES produit(id_produit),
     date_commande VARCHAR(10),
@@ -150,9 +150,8 @@ CREATE TABLE historique_des_prix(
 );
 
 /* Modifier les contraintes FK en accord avec la modélisation*/
-
 CREATE TABLE notation(
-    id_produit INTEGER REFERENCES produit(id_produit),
+    id_produit INTEGER REFERENCES produit_commande(id_produit),
     type_produit VARCHAR(20),
     id_client INTEGER REFERENCES client(id_client),
     note INTEGER,
