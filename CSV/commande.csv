@@ -15,7 +15,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 14,13/05/2020,14,15,adresse du client,16.79,CB,True,livree,16/05/2020
 15,07/05/2020,15,16,adresse du client,13.64,CB,True,livree,10/05/2020
 16,03/05/2020,16,17,adresse du client,20.54,CB,True,livree,06/05/2020
-17,08/05/2020,17,18,adresse du client,25.37,CB,True,livree,11/05/2020
+17,08/05/2020,17,18,adresse du client,25.37,CB,True,en_livraison,11/05/2020
 18,14/05/2020,18,19,adresse du client,26.36,CB,True,livree,17/05/2020
 19,27/05/2020,19,20,adresse du client,27.99,CB,True,livree,30/05/2020
 20,15/05/2020,20,21,adresse du client,26.31,CB,True,livree,18/05/2020
@@ -25,7 +25,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 24,25/05/2020,24,25,adresse du client,24.65,CB,True,livree,28/05/2020
 25,23/05/2020,25,26,adresse du client,20.13,CB,True,livree,26/05/2020
 26,25/05/2020,26,27,adresse du client,26.0,CB,True,livree,28/05/2020
-27,25/05/2020,27,28,adresse du client,12.39,CB,True,livree,28/05/2020
+27,25/05/2020,27,28,adresse du client,12.39,CB,True,en_livraison,28/05/2020
 28,23/05/2020,28,29,adresse du client,1.75,chèque,True,livree,26/05/2020
 29,28/05/2020,29,30,adresse du client,6.73,CB,True,livree,31/05/2020
 30,19/05/2020,30,31,adresse du client,16.81,CB,True,livree,22/05/2020
@@ -90,7 +90,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 89,19/05/2020,89,90,adresse du client,6.15,CB,True,livree,22/05/2020
 90,05/05/2020,90,91,adresse du client,29.18,CB,True,livree,08/05/2020
 91,08/05/2020,91,92,adresse du client,28.77,CB,True,livree,11/05/2020
-92,12/05/2020,92,93,adresse du client,2.19,CB,True,livree,15/05/2020
+92,12/05/2020,92,93,adresse du client,2.19,CB,True,en_livraison,15/05/2020
 93,26/05/2020,93,94,adresse du client,17.1,CB,True,livree,29/05/2020
 94,13/05/2020,94,95,adresse du client,27.42,CB,True,livree,16/05/2020
 95,31/05/2020,95,96,adresse du client,23.47,CB,True,livree,03/06/2020
@@ -116,7 +116,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 115,02/05/2020,115,116,adresse du client,6.26,CB,True,livree,05/05/2020
 116,04/05/2020,116,117,adresse du client,15.89,CB,True,livree,07/05/2020
 117,03/05/2020,117,118,adresse du client,21.6,CB,True,livree,06/05/2020
-118,24/05/2020,118,119,adresse du client,3.47,CB,True,livree,27/05/2020
+118,24/05/2020,118,119,adresse du client,3.47,CB,True,en_preparation,27/05/2020
 119,29/05/2020,119,120,adresse du client,15.99,CB,True,livree,01/06/2020
 120,03/05/2020,120,121,adresse du client,26.02,CB,True,livree,06/05/2020
 121,10/05/2020,121,122,adresse du client,17.95,CB,True,livree,13/05/2020
@@ -130,7 +130,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 129,10/05/2020,129,130,adresse du client,19.72,CB,True,livree,13/05/2020
 130,26/05/2020,130,131,adresse du client,23.24,CB,True,livree,29/05/2020
 131,13/05/2020,131,132,adresse du client,28.22,CB,True,livree,16/05/2020
-132,09/05/2020,132,133,adresse du client,28.49,CB,True,livree,12/05/2020
+132,09/05/2020,132,133,adresse du client,28.49,CB,True,en_livraison,12/05/2020
 133,14/05/2020,133,134,adresse du client,8.12,CB,True,livree,17/05/2020
 134,24/05/2020,134,135,adresse du client,17.5,CB,True,livree,27/05/2020
 135,13/05/2020,135,136,adresse du client,15.5,CB,True,livree,16/05/2020
@@ -190,7 +190,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 189,24/05/2020,189,190,adresse du client,20.77,CB,True,livree,27/05/2020
 190,29/05/2020,190,191,adresse du client,30.89,CB,True,livree,01/06/2020
 191,03/05/2020,191,192,adresse du client,9.8,CB,True,livree,06/05/2020
-192,20/05/2020,192,193,adresse du client,8.52,CB,True,livree,23/05/2020
+192,20/05/2020,192,193,adresse du client,8.52,CB,True,en_preparation,23/05/2020
 193,21/05/2020,193,194,adresse du client,17.23,CB,True,livree,24/05/2020
 194,11/05/2020,194,195,adresse du client,26.25,CB,True,livree,14/05/2020
 195,30/05/2020,195,196,adresse du client,12.15,CB,True,livree,02/06/2020
@@ -200,7 +200,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 199,13/05/2020,199,200,adresse du client,13.25,CB,True,livree,16/05/2020
 200,27/05/2020,200,201,adresse du client,21.65,CB,True,livree,30/05/2020
 201,11/05/2020,201,202,adresse du client,22.13,CB,True,livree,14/05/2020
-202,04/05/2020,202,203,adresse du client,5.41,CB,True,livree,07/05/2020
+202,04/05/2020,202,203,adresse du client,5.41,CB,True,en_livraison,07/05/2020
 203,04/05/2020,203,204,adresse du client,27.71,CB,True,livree,07/05/2020
 204,30/05/2020,204,205,adresse du client,24.44,CB,True,livree,02/06/2020
 205,08/05/2020,205,206,adresse du client,16.73,CB,True,livree,11/05/2020
@@ -250,7 +250,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 249,12/05/2020,249,250,adresse du client,9.42,CB,True,livree,15/05/2020
 250,24/05/2020,250,251,adresse du client,1.08,chèque,True,livree,27/05/2020
 251,22/05/2020,251,252,adresse du client,25.14,CB,True,livree,25/05/2020
-252,09/05/2020,252,253,adresse du client,6.42,CB,True,livree,12/05/2020
+252,09/05/2020,252,253,adresse du client,6.42,CB,True,en_livraison,12/05/2020
 253,17/05/2020,253,254,adresse du client,6.85,CB,True,livree,20/05/2020
 254,13/05/2020,254,255,adresse du client,4.74,CB,True,livree,16/05/2020
 255,13/05/2020,255,256,adresse du client,12.31,CB,True,livree,16/05/2020
@@ -290,7 +290,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 289,28/05/2020,289,290,adresse du client,30.98,CB,True,livree,31/05/2020
 290,15/05/2020,290,291,adresse du client,24.99,CB,True,livree,18/05/2020
 291,01/05/2020,291,292,adresse du client,12.87,CB,True,livree,04/05/2020
-292,06/05/2020,292,293,adresse du client,8.0,CB,True,livree,09/05/2020
+292,06/05/2020,292,293,adresse du client,8.0,CB,True,en_livraison,09/05/2020
 293,20/05/2020,293,294,adresse du client,26.08,CB,True,livree,23/05/2020
 294,18/05/2020,294,295,adresse du client,27.47,CB,True,livree,21/05/2020
 295,15/05/2020,295,296,adresse du client,15.99,CB,True,livree,18/05/2020
@@ -310,7 +310,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 309,15/05/2020,309,310,adresse du client,16.88,CB,True,livree,18/05/2020
 310,08/05/2020,310,311,adresse du client,9.32,CB,True,livree,11/05/2020
 311,13/05/2020,311,312,adresse du client,27.71,CB,True,livree,16/05/2020
-312,28/05/2020,312,313,adresse du client,26.16,CB,True,livree,31/05/2020
+312,28/05/2020,312,313,adresse du client,26.16,CB,True,en_livraison,31/05/2020
 313,17/05/2020,313,314,adresse du client,13.51,CB,True,livree,20/05/2020
 314,19/05/2020,314,315,adresse du client,13.39,CB,True,livree,22/05/2020
 315,10/05/2020,315,316,adresse du client,17.12,CB,True,livree,13/05/2020
@@ -330,8 +330,8 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 329,18/05/2020,329,330,adresse du client,9.37,CB,True,livree,21/05/2020
 330,08/05/2020,330,331,adresse du client,25.83,CB,True,livree,11/05/2020
 331,08/05/2020,331,332,adresse du client,28.77,CB,True,livree,11/05/2020
-332,15/05/2020,332,333,adresse du client,26.99,CB,True,livree,18/05/2020
-333,17/05/2020,333,334,adresse du client,13.67,CB,True,livree,20/05/2020
+332,15/05/2020,332,333,adresse du client,26.99,CB,True,en_livraison,18/05/2020
+333,17/05/2020,333,334,adresse du client,13.67,CB,True,en_livraison,20/05/2020
 334,09/05/2020,334,335,adresse du client,7.85,CB,True,livree,12/05/2020
 335,18/05/2020,335,336,adresse du client,29.48,CB,True,livree,21/05/2020
 336,12/05/2020,336,337,adresse du client,24.62,CB,True,livree,15/05/2020
@@ -371,7 +371,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 370,31/05/2020,370,371,adresse du client,3.93,CB,True,livree,03/06/2020
 371,01/05/2020,371,372,adresse du client,5.44,CB,True,livree,04/05/2020
 372,30/05/2020,372,373,adresse du client,25.43,CB,True,livree,02/06/2020
-373,09/05/2020,373,374,adresse du client,19.84,CB,True,livree,12/05/2020
+373,09/05/2020,373,374,adresse du client,19.84,CB,True,en_livraison,12/05/2020
 374,21/05/2020,374,375,adresse du client,14.76,CB,True,livree,24/05/2020
 375,20/05/2020,375,376,adresse du client,13.6,CB,True,livree,23/05/2020
 376,10/05/2020,376,377,adresse du client,1.49,chèque,True,livree,13/05/2020
@@ -388,7 +388,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 387,04/05/2020,387,388,adresse du client,23.55,CB,True,livree,07/05/2020
 388,15/05/2020,388,389,adresse du client,17.86,CB,True,livree,18/05/2020
 389,18/05/2020,389,390,adresse du client,25.95,CB,True,livree,21/05/2020
-390,18/05/2020,390,391,adresse du client,16.2,CB,True,livree,21/05/2020
+390,18/05/2020,390,391,adresse du client,16.2,CB,True,en_attente,21/05/2020
 391,16/05/2020,391,392,adresse du client,22.8,CB,True,livree,19/05/2020
 392,20/05/2020,392,393,adresse du client,25.44,CB,True,livree,23/05/2020
 393,16/05/2020,393,394,adresse du client,30.75,CB,True,livree,19/05/2020
@@ -411,7 +411,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 410,21/05/2020,410,411,adresse du client,21.76,CB,True,livree,24/05/2020
 411,10/05/2020,411,412,adresse du client,26.54,CB,True,livree,13/05/2020
 412,01/05/2020,412,413,adresse du client,27.21,CB,True,livree,04/05/2020
-413,12/05/2020,413,414,adresse du client,9.28,CB,True,livree,15/05/2020
+413,12/05/2020,413,414,adresse du client,9.28,CB,True,en_livraison,15/05/2020
 414,09/05/2020,414,415,adresse du client,24.71,CB,True,livree,12/05/2020
 415,02/05/2020,415,416,adresse du client,6.68,CB,True,livree,05/05/2020
 416,08/05/2020,416,417,adresse du client,19.35,CB,True,livree,11/05/2020
@@ -481,7 +481,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 480,22/05/2020,480,481,adresse du client,17.07,CB,True,livree,25/05/2020
 481,02/05/2020,481,482,adresse du client,27.91,CB,True,livree,05/05/2020
 482,24/05/2020,482,483,adresse du client,12.12,CB,True,livree,27/05/2020
-483,07/05/2020,483,484,adresse du client,9.99,CB,True,livree,10/05/2020
+483,07/05/2020,483,484,adresse du client,9.99,CB,True,en_livraison,10/05/2020
 484,09/05/2020,484,485,adresse du client,21.54,CB,True,livree,12/05/2020
 485,24/05/2020,485,486,adresse du client,27.15,CB,True,livree,27/05/2020
 486,08/05/2020,486,487,adresse du client,1.27,chèque,True,livree,11/05/2020
@@ -539,11 +539,11 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 538,20/05/2020,538,539,adresse du client,9.03,CB,True,livree,23/05/2020
 539,18/05/2020,539,540,adresse du client,21.04,CB,True,livree,21/05/2020
 540,22/05/2020,540,541,adresse du client,22.0,CB,True,livree,25/05/2020
-541,29/05/2020,541,542,adresse du client,9.63,CB,True,livree,01/06/2020
+541,29/05/2020,541,542,adresse du client,9.63,CB,True,en_attente,01/06/2020
 542,28/05/2020,542,543,adresse du client,24.91,CB,True,livree,31/05/2020
 543,12/05/2020,543,544,adresse du client,3.17,CB,True,livree,15/05/2020
 544,30/05/2020,544,545,adresse du client,22.45,CB,True,livree,02/06/2020
-545,14/05/2020,545,546,adresse du client,24.84,CB,True,livree,17/05/2020
+545,14/05/2020,545,546,adresse du client,24.84,CB,True,en_attente,17/05/2020
 546,27/05/2020,546,547,adresse du client,13.56,CB,True,livree,30/05/2020
 547,25/05/2020,547,548,adresse du client,30.71,CB,True,livree,28/05/2020
 548,10/05/2020,548,549,adresse du client,2.87,CB,True,livree,13/05/2020
@@ -551,7 +551,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 550,09/05/2020,550,551,adresse du client,2.26,CB,True,livree,12/05/2020
 551,20/05/2020,551,552,adresse du client,8.75,CB,True,livree,23/05/2020
 552,03/05/2020,552,553,adresse du client,5.81,CB,True,livree,06/05/2020
-553,27/05/2020,553,554,adresse du client,14.51,CB,True,livree,30/05/2020
+553,27/05/2020,553,554,adresse du client,14.51,CB,True,en_livraison,30/05/2020
 554,26/05/2020,554,555,adresse du client,5.75,CB,True,livree,29/05/2020
 555,26/05/2020,555,556,adresse du client,19.14,CB,True,livree,29/05/2020
 556,25/05/2020,556,557,adresse du client,14.35,CB,True,livree,28/05/2020
@@ -671,7 +671,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 670,21/05/2020,670,671,adresse du client,2.03,CB,True,livree,24/05/2020
 671,18/05/2020,671,672,adresse du client,11.21,CB,True,livree,21/05/2020
 672,21/05/2020,672,673,adresse du client,10.93,CB,True,livree,24/05/2020
-673,05/05/2020,673,674,adresse du client,12.02,CB,True,livree,08/05/2020
+673,05/05/2020,673,674,adresse du client,12.02,CB,True,en_livraison,08/05/2020
 674,18/05/2020,674,675,adresse du client,30.92,CB,True,livree,21/05/2020
 675,31/05/2020,675,676,adresse du client,7.84,CB,True,livree,03/06/2020
 676,17/05/2020,676,677,adresse du client,23.93,CB,True,livree,20/05/2020
@@ -711,7 +711,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 710,02/05/2020,710,711,adresse du client,13.5,CB,True,livree,05/05/2020
 711,05/05/2020,711,712,adresse du client,27.37,CB,True,livree,08/05/2020
 712,16/05/2020,712,713,adresse du client,27.94,CB,True,livree,19/05/2020
-713,01/05/2020,713,714,adresse du client,22.7,CB,True,livree,04/05/2020
+713,01/05/2020,713,714,adresse du client,22.7,CB,True,en_livraison,04/05/2020
 714,23/05/2020,714,715,adresse du client,4.98,CB,True,livree,26/05/2020
 715,09/05/2020,715,716,adresse du client,16.42,CB,True,livree,12/05/2020
 716,29/05/2020,716,717,adresse du client,14.51,CB,True,livree,01/06/2020
@@ -792,7 +792,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 791,03/05/2020,791,792,adresse du client,5.53,CB,True,livree,06/05/2020
 792,18/05/2020,792,793,adresse du client,5.37,CB,True,livree,21/05/2020
 793,13/05/2020,793,794,adresse du client,27.32,CB,True,livree,16/05/2020
-794,23/05/2020,794,795,adresse du client,30.58,CB,True,livree,26/05/2020
+794,23/05/2020,794,795,adresse du client,30.58,CB,True,en_attente,26/05/2020
 795,10/05/2020,795,796,adresse du client,29.64,CB,True,livree,13/05/2020
 796,16/05/2020,796,797,adresse du client,25.21,CB,True,livree,19/05/2020
 797,19/05/2020,797,798,adresse du client,15.11,CB,True,livree,22/05/2020
@@ -801,7 +801,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 800,11/05/2020,800,801,adresse du client,12.03,CB,True,livree,14/05/2020
 801,22/05/2020,801,802,adresse du client,29.97,CB,True,livree,25/05/2020
 802,05/05/2020,802,803,adresse du client,18.09,CB,True,livree,08/05/2020
-803,17/05/2020,803,804,adresse du client,24.9,CB,True,livree,20/05/2020
+803,17/05/2020,803,804,adresse du client,24.9,CB,True,en_livraison,20/05/2020
 804,11/05/2020,804,805,adresse du client,12.43,CB,True,livree,14/05/2020
 805,25/05/2020,805,806,adresse du client,2.67,CB,True,livree,28/05/2020
 806,02/05/2020,806,807,adresse du client,9.79,CB,True,livree,05/05/2020
@@ -884,7 +884,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 883,21/05/2020,883,884,adresse du client,18.91,CB,True,livree,24/05/2020
 884,15/05/2020,884,885,adresse du client,8.88,CB,True,livree,18/05/2020
 885,14/05/2020,885,886,adresse du client,19.3,CB,True,livree,17/05/2020
-886,27/05/2020,886,887,adresse du client,8.51,CB,True,livree,30/05/2020
+886,27/05/2020,886,887,adresse du client,8.51,CB,True,en_preparation,30/05/2020
 887,18/05/2020,887,888,adresse du client,26.03,CB,True,livree,21/05/2020
 888,31/05/2020,888,889,adresse du client,6.61,CB,True,livree,03/06/2020
 889,24/05/2020,889,890,adresse du client,17.19,CB,True,livree,27/05/2020
@@ -1015,7 +1015,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 1014,16/05/2020,1014,15,adresse du client,27.56,CB,True,livree,19/05/2020
 1015,10/05/2020,1015,16,adresse du client,19.13,CB,True,livree,13/05/2020
 1016,21/05/2020,1016,17,adresse du client,28.5,CB,True,livree,24/05/2020
-1017,30/05/2020,1017,18,adresse du client,8.01,CB,True,livree,02/06/2020
+1017,30/05/2020,1017,18,adresse du client,8.01,CB,True,en_preparation,02/06/2020
 1018,25/05/2020,1018,19,adresse du client,3.04,CB,True,livree,28/05/2020
 1019,06/05/2020,1019,20,adresse du client,15.93,CB,True,livree,09/05/2020
 1020,19/05/2020,1020,21,adresse du client,27.88,CB,True,livree,22/05/2020
@@ -1058,7 +1058,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 1057,11/05/2020,1057,58,adresse du client,4.91,CB,True,livree,14/05/2020
 1058,26/05/2020,1058,59,adresse du client,17.37,CB,True,livree,29/05/2020
 1059,18/05/2020,1059,60,adresse du client,28.73,CB,True,livree,21/05/2020
-1060,27/05/2020,1060,61,adresse du client,5.58,CB,True,livree,30/05/2020
+1060,27/05/2020,1060,61,adresse du client,5.58,CB,True,en_preparation,30/05/2020
 1061,14/05/2020,1061,62,adresse du client,7.92,CB,True,livree,17/05/2020
 1062,16/05/2020,1062,63,adresse du client,12.81,CB,True,livree,19/05/2020
 1063,29/05/2020,1063,64,adresse du client,2.37,CB,True,livree,01/06/2020
@@ -1788,7 +1788,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 1787,12/05/2020,1787,788,adresse du client,27.63,CB,True,livree,15/05/2020
 1788,02/05/2020,1788,789,adresse du client,10.27,CB,True,livree,05/05/2020
 1789,19/05/2020,1789,790,adresse du client,19.74,CB,True,livree,22/05/2020
-1790,21/05/2020,1790,791,adresse du client,19.97,CB,True,livree,24/05/2020
+1790,21/05/2020,1790,791,adresse du client,19.97,CB,True,en_livraison,24/05/2020
 1791,10/05/2020,1791,792,adresse du client,2.83,CB,True,livree,13/05/2020
 1792,29/05/2020,1792,793,adresse du client,19.45,CB,True,livree,01/06/2020
 1793,05/05/2020,1793,794,adresse du client,8.58,CB,True,livree,08/05/2020
@@ -1838,7 +1838,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 1837,21/05/2020,1837,838,adresse du client,12.99,CB,True,livree,24/05/2020
 1838,05/05/2020,1838,839,adresse du client,7.18,CB,True,livree,08/05/2020
 1839,12/05/2020,1839,840,adresse du client,8.46,CB,True,livree,15/05/2020
-1840,10/05/2020,1840,841,adresse du client,20.26,CB,True,livree,13/05/2020
+1840,10/05/2020,1840,841,adresse du client,20.26,CB,True,en_livraison,13/05/2020
 1841,14/05/2020,1841,842,adresse du client,23.56,CB,True,livree,17/05/2020
 1842,31/05/2020,1842,843,adresse du client,17.7,CB,True,livree,03/06/2020
 1843,20/05/2020,1843,844,adresse du client,22.2,CB,True,livree,23/05/2020
@@ -1908,7 +1908,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 1907,31/05/2020,1907,908,adresse du client,17.42,CB,True,livree,03/06/2020
 1908,12/05/2020,1908,909,adresse du client,3.54,CB,True,livree,15/05/2020
 1909,02/05/2020,1909,910,adresse du client,2.75,CB,True,livree,05/05/2020
-1910,25/05/2020,1910,911,adresse du client,1.26,chèque,True,livree,28/05/2020
+1910,25/05/2020,1910,911,adresse du client,1.26,chèque,True,en_livraison,28/05/2020
 1911,13/05/2020,1911,912,adresse du client,28.1,CB,True,livree,16/05/2020
 1912,16/05/2020,1912,913,adresse du client,20.18,CB,True,livree,19/05/2020
 1913,14/05/2020,1913,914,adresse du client,11.51,CB,True,livree,17/05/2020
@@ -2030,7 +2030,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2029,14/05/2020,2029,30,adresse du client,5.02,CB,True,livree,17/05/2020
 2030,15/05/2020,2030,31,adresse du client,29.51,CB,True,livree,18/05/2020
 2031,27/05/2020,2031,32,adresse du client,9.7,CB,True,livree,30/05/2020
-2032,08/05/2020,2032,33,adresse du client,10.54,CB,True,livree,11/05/2020
+2032,08/05/2020,2032,33,adresse du client,10.54,CB,True,en_livraison,11/05/2020
 2033,11/05/2020,2033,34,adresse du client,15.51,CB,True,livree,14/05/2020
 2034,04/05/2020,2034,35,adresse du client,24.64,CB,True,livree,07/05/2020
 2035,18/05/2020,2035,36,adresse du client,24.82,CB,True,livree,21/05/2020
@@ -2180,7 +2180,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2179,27/05/2020,2179,180,adresse du client,28.77,CB,True,livree,30/05/2020
 2180,24/05/2020,2180,181,adresse du client,22.68,CB,True,livree,27/05/2020
 2181,20/05/2020,2181,182,adresse du client,27.0,CB,True,livree,23/05/2020
-2182,13/05/2020,2182,183,adresse du client,30.0,CB,True,livree,16/05/2020
+2182,13/05/2020,2182,183,adresse du client,30.0,CB,True,en_livraison,16/05/2020
 2183,12/05/2020,2183,184,adresse du client,30.61,CB,True,livree,15/05/2020
 2184,26/05/2020,2184,185,adresse du client,9.67,CB,True,livree,29/05/2020
 2185,20/05/2020,2185,186,adresse du client,27.8,CB,True,livree,23/05/2020
@@ -2290,7 +2290,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2289,21/05/2020,2289,290,adresse du client,20.2,CB,True,livree,24/05/2020
 2290,26/05/2020,2290,291,adresse du client,12.09,CB,True,livree,29/05/2020
 2291,22/05/2020,2291,292,adresse du client,14.03,CB,True,livree,25/05/2020
-2292,01/05/2020,2292,293,adresse du client,5.25,CB,True,livree,04/05/2020
+2292,01/05/2020,2292,293,adresse du client,5.25,CB,True,en_livraison,04/05/2020
 2293,30/05/2020,2293,294,adresse du client,6.73,CB,True,livree,02/06/2020
 2294,02/05/2020,2294,295,adresse du client,26.18,CB,True,livree,05/05/2020
 2295,29/05/2020,2295,296,adresse du client,13.32,CB,True,livree,01/06/2020
@@ -2329,7 +2329,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2328,25/05/2020,2328,329,adresse du client,27.53,CB,True,livree,28/05/2020
 2329,10/05/2020,2329,330,adresse du client,11.83,CB,True,livree,13/05/2020
 2330,29/05/2020,2330,331,adresse du client,15.83,CB,True,livree,01/06/2020
-2331,01/05/2020,2331,332,adresse du client,24.75,CB,True,livree,04/05/2020
+2331,01/05/2020,2331,332,adresse du client,24.75,CB,True,en_preparation,04/05/2020
 2332,24/05/2020,2332,333,adresse du client,27.29,CB,True,livree,27/05/2020
 2333,13/05/2020,2333,334,adresse du client,23.31,CB,True,livree,16/05/2020
 2334,17/05/2020,2334,335,adresse du client,12.68,CB,True,livree,20/05/2020
@@ -2420,7 +2420,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2419,12/05/2020,2419,420,adresse du client,22.98,CB,True,livree,15/05/2020
 2420,12/05/2020,2420,421,adresse du client,24.68,CB,True,livree,15/05/2020
 2421,19/05/2020,2421,422,adresse du client,27.39,CB,True,livree,22/05/2020
-2422,30/05/2020,2422,423,adresse du client,23.25,CB,True,livree,02/06/2020
+2422,30/05/2020,2422,423,adresse du client,23.25,CB,True,en_livraison,02/06/2020
 2423,06/05/2020,2423,424,adresse du client,15.68,CB,True,livree,09/05/2020
 2424,28/05/2020,2424,425,adresse du client,9.92,CB,True,livree,31/05/2020
 2425,17/05/2020,2425,426,adresse du client,10.23,CB,True,livree,20/05/2020
@@ -2490,8 +2490,8 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2489,11/05/2020,2489,490,adresse du client,17.34,CB,True,livree,14/05/2020
 2490,15/05/2020,2490,491,adresse du client,18.67,CB,True,livree,18/05/2020
 2491,06/05/2020,2491,492,adresse du client,28.98,CB,True,livree,09/05/2020
-2492,27/05/2020,2492,493,adresse du client,17.83,CB,True,livree,30/05/2020
-2493,20/05/2020,2493,494,adresse du client,29.36,CB,True,livree,23/05/2020
+2492,27/05/2020,2492,493,adresse du client,17.83,CB,True,en_livraison,30/05/2020
+2493,20/05/2020,2493,494,adresse du client,29.36,CB,True,en_livraison,23/05/2020
 2494,20/05/2020,2494,495,adresse du client,14.28,CB,True,livree,23/05/2020
 2495,10/05/2020,2495,496,adresse du client,11.43,CB,True,livree,13/05/2020
 2496,02/05/2020,2496,497,adresse du client,14.87,CB,True,livree,05/05/2020
@@ -2539,8 +2539,8 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2538,21/05/2020,2538,539,adresse du client,23.99,CB,True,livree,24/05/2020
 2539,22/05/2020,2539,540,adresse du client,30.78,CB,True,livree,25/05/2020
 2540,17/05/2020,2540,541,adresse du client,12.77,CB,True,livree,20/05/2020
-2541,03/05/2020,2541,542,adresse du client,21.19,CB,True,livree,06/05/2020
-2542,21/05/2020,2542,543,adresse du client,5.41,CB,True,livree,24/05/2020
+2541,03/05/2020,2541,542,adresse du client,21.19,CB,True,en_livraison,06/05/2020
+2542,21/05/2020,2542,543,adresse du client,5.41,CB,True,en_livraison,24/05/2020
 2543,20/05/2020,2543,544,adresse du client,1.22,chèque,True,livree,23/05/2020
 2544,18/05/2020,2544,545,adresse du client,7.25,CB,True,livree,21/05/2020
 2545,09/05/2020,2545,546,adresse du client,5.85,CB,True,livree,12/05/2020
@@ -2572,7 +2572,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2571,15/05/2020,2571,572,adresse du client,17.94,CB,True,livree,18/05/2020
 2572,22/05/2020,2572,573,adresse du client,23.32,CB,True,livree,25/05/2020
 2573,23/05/2020,2573,574,adresse du client,21.47,CB,True,livree,26/05/2020
-2574,05/05/2020,2574,575,adresse du client,10.11,CB,True,livree,08/05/2020
+2574,05/05/2020,2574,575,adresse du client,10.11,CB,True,en_livraison,08/05/2020
 2575,21/05/2020,2575,576,adresse du client,21.79,CB,True,livree,24/05/2020
 2576,03/05/2020,2576,577,adresse du client,7.11,CB,True,livree,06/05/2020
 2577,13/05/2020,2577,578,adresse du client,22.34,CB,True,livree,16/05/2020
@@ -2626,7 +2626,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2625,16/05/2020,2625,626,adresse du client,23.85,CB,True,livree,19/05/2020
 2626,26/05/2020,2626,627,adresse du client,17.87,CB,True,livree,29/05/2020
 2627,04/05/2020,2627,628,adresse du client,19.44,CB,True,livree,07/05/2020
-2628,16/05/2020,2628,629,adresse du client,12.65,CB,True,livree,19/05/2020
+2628,16/05/2020,2628,629,adresse du client,12.65,CB,True,en_livraison,19/05/2020
 2629,18/05/2020,2629,630,adresse du client,29.84,CB,True,livree,21/05/2020
 2630,08/05/2020,2630,631,adresse du client,1.02,chèque,True,livree,11/05/2020
 2631,21/05/2020,2631,632,adresse du client,26.69,CB,True,livree,24/05/2020
@@ -2676,7 +2676,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 2675,15/05/2020,2675,676,adresse du client,22.71,CB,True,livree,18/05/2020
 2676,11/05/2020,2676,677,adresse du client,24.67,CB,True,livree,14/05/2020
 2677,22/05/2020,2677,678,adresse du client,21.19,CB,True,livree,25/05/2020
-2678,09/05/2020,2678,679,adresse du client,9.88,CB,True,livree,12/05/2020
+2678,09/05/2020,2678,679,adresse du client,9.88,CB,True,en_livraison,12/05/2020
 2679,06/05/2020,2679,680,adresse du client,25.84,CB,True,livree,09/05/2020
 2680,18/05/2020,2680,681,adresse du client,9.45,CB,True,livree,21/05/2020
 2681,19/05/2020,2681,682,adresse du client,8.83,CB,True,livree,22/05/2020
@@ -3747,7 +3747,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 3746,17/05/2020,3746,747,adresse du client,20.61,CB,True,livree,20/05/2020
 3747,05/05/2020,3747,748,adresse du client,19.63,CB,True,livree,08/05/2020
 3748,14/05/2020,3748,749,adresse du client,14.51,CB,True,livree,17/05/2020
-3749,30/05/2020,3749,750,adresse du client,3.39,CB,True,livree,02/06/2020
+3749,30/05/2020,3749,750,adresse du client,3.39,CB,True,en_attente,02/06/2020
 3750,28/05/2020,3750,751,adresse du client,26.44,CB,True,livree,31/05/2020
 3751,06/05/2020,3751,752,adresse du client,25.86,CB,True,livree,09/05/2020
 3752,01/05/2020,3752,753,adresse du client,13.23,CB,True,livree,04/05/2020
@@ -4223,7 +4223,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 4222,28/05/2020,4222,223,adresse du client,15.75,CB,True,livree,31/05/2020
 4223,29/05/2020,4223,224,adresse du client,8.55,CB,True,livree,01/06/2020
 4224,15/05/2020,4224,225,adresse du client,19.7,CB,True,livree,18/05/2020
-4225,20/05/2020,4225,226,adresse du client,27.7,CB,True,livree,23/05/2020
+4225,20/05/2020,4225,226,adresse du client,27.7,CB,True,en_livraison,23/05/2020
 4226,29/05/2020,4226,227,adresse du client,3.65,CB,True,livree,01/06/2020
 4227,08/05/2020,4227,228,adresse du client,25.23,CB,True,livree,11/05/2020
 4228,17/05/2020,4228,229,adresse du client,10.58,CB,True,livree,20/05/2020
@@ -4427,7 +4427,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 4426,24/05/2020,4426,427,adresse du client,5.05,CB,True,livree,27/05/2020
 4427,25/05/2020,4427,428,adresse du client,27.49,CB,True,livree,28/05/2020
 4428,18/05/2020,4428,429,adresse du client,19.25,CB,True,livree,21/05/2020
-4429,23/05/2020,4429,430,adresse du client,3.62,CB,True,livree,26/05/2020
+4429,23/05/2020,4429,430,adresse du client,3.62,CB,True,en_preparation,26/05/2020
 4430,27/05/2020,4430,431,adresse du client,24.92,CB,True,livree,30/05/2020
 4431,31/05/2020,4431,432,adresse du client,7.91,CB,True,livree,03/06/2020
 4432,09/05/2020,4432,433,adresse du client,25.61,CB,True,livree,12/05/2020
@@ -4765,7 +4765,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 4764,27/05/2020,4764,765,adresse du client,11.87,CB,True,livree,30/05/2020
 4765,07/05/2020,4765,766,adresse du client,4.52,CB,True,livree,10/05/2020
 4766,11/05/2020,4766,767,adresse du client,3.93,CB,True,livree,14/05/2020
-4767,16/05/2020,4767,768,adresse du client,15.27,CB,True,livree,19/05/2020
+4767,16/05/2020,4767,768,adresse du client,15.27,CB,True,en_attente,19/05/2020
 4768,31/05/2020,4768,769,adresse du client,3.1,CB,True,livree,03/06/2020
 4769,15/05/2020,4769,770,adresse du client,13.22,CB,True,livree,18/05/2020
 4770,09/05/2020,4770,771,adresse du client,7.77,CB,True,livree,12/05/2020
@@ -4903,7 +4903,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 4902,24/05/2020,4902,903,adresse du client,30.39,CB,True,livree,27/05/2020
 4903,02/05/2020,4903,904,adresse du client,11.98,CB,True,livree,05/05/2020
 4904,19/05/2020,4904,905,adresse du client,1.76,chèque,True,livree,22/05/2020
-4905,27/05/2020,4905,906,adresse du client,3.82,CB,True,livree,30/05/2020
+4905,27/05/2020,4905,906,adresse du client,3.82,CB,True,en_attente,30/05/2020
 4906,08/05/2020,4906,907,adresse du client,29.41,CB,True,livree,11/05/2020
 4907,17/05/2020,4907,908,adresse du client,17.44,CB,True,livree,20/05/2020
 4908,15/05/2020,4908,909,adresse du client,15.09,CB,True,livree,18/05/2020
@@ -4930,7 +4930,7 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 4929,11/05/2020,4929,930,adresse du client,24.07,CB,True,livree,14/05/2020
 4930,03/05/2020,4930,931,adresse du client,21.73,CB,True,livree,06/05/2020
 4931,28/05/2020,4931,932,adresse du client,6.54,CB,True,livree,31/05/2020
-4932,02/05/2020,4932,933,adresse du client,27.3,CB,True,livree,05/05/2020
+4932,02/05/2020,4932,933,adresse du client,27.3,CB,True,en_livraison,05/05/2020
 4933,06/05/2020,4933,934,adresse du client,3.52,CB,True,livree,09/05/2020
 4934,31/05/2020,4934,935,adresse du client,18.97,CB,True,livree,03/06/2020
 4935,27/05/2020,4935,936,adresse du client,7.19,CB,True,livree,30/05/2020
@@ -4983,10 +4983,10 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 4982,03/05/2020,4982,983,adresse du client,11.42,CB,True,livree,06/05/2020
 4983,27/05/2020,4983,984,adresse du client,4.29,CB,True,livree,30/05/2020
 4984,24/05/2020,4984,985,adresse du client,21.16,CB,True,livree,27/05/2020
-4985,06/05/2020,4985,986,adresse du client,25.61,CB,True,livree,09/05/2020
+4985,06/05/2020,4985,986,adresse du client,25.61,CB,True,en_livraison,09/05/2020
 4986,02/05/2020,4986,987,adresse du client,30.48,CB,True,livree,05/05/2020
 4987,21/05/2020,4987,988,adresse du client,11.16,CB,True,livree,24/05/2020
-4988,14/05/2020,4988,989,adresse du client,13.66,CB,True,livree,17/05/2020
+4988,14/05/2020,4988,989,adresse du client,13.66,CB,True,en_preparation,17/05/2020
 4989,21/05/2020,4989,990,adresse du client,12.52,CB,True,livree,24/05/2020
 4990,03/05/2020,4990,991,adresse du client,11.58,CB,True,livree,06/05/2020
 4991,28/05/2020,4991,992,adresse du client,5.21,CB,True,livree,31/05/2020
@@ -4995,6 +4995,6 @@ id_commande,date_commande,id_panier,id_client,adresse_livraison,prix,mode_payeme
 4994,08/05/2020,4994,995,adresse du client,3.54,CB,True,livree,11/05/2020
 4995,06/05/2020,4995,996,adresse du client,27.93,CB,True,livree,09/05/2020
 4996,28/05/2020,4996,997,adresse du client,2.98,CB,True,livree,31/05/2020
-4997,03/05/2020,4997,998,adresse du client,14.3,CB,True,livree,06/05/2020
+4997,03/05/2020,4997,998,adresse du client,14.3,CB,True,en_preparation,06/05/2020
 4998,26/05/2020,4998,999,adresse du client,15.73,CB,True,livree,29/05/2020
 4999,15/05/2020,4999,1000,adresse du client,15.74,CB,True,livree,18/05/2020
