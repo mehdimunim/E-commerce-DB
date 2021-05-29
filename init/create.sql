@@ -97,16 +97,19 @@ CREATE TABLE produit_dans_panier(
     CHECK (quantite >=0)
 );
 
-CREATE TYPE etat_commande AS ENUM ('en_attente','en_preparation','livree','annulee');
+CREATE TYPE etat_commande AS ENUM ('en_attente','en_preparation', 'en_livraison','livree','annulee');
 CREATE TABLE commande( 
     id_commande INTEGER PRIMARY KEY,
     date_commande VARCHAR(10),
+	id_prod INTEGER REFERENCES produit(id_produit),
+    id_panier INTEGER REFERENCES panier(id_panier),
     adresse_livraison TEXT NOT NULL,
     prix_commande NUMERIC,
     mode_payement TEXT,
     effectivement_paye BOOLEAN,
-	etat etat_commande
-)INHERITS(panier);
+	etat etat_commande,
+	date_expedition VARCHAR(10)
+);
 
 CREATE TABLE commande_annulee(
     id_commande INTEGER PRIMARY KEY,
@@ -154,6 +157,6 @@ CREATE TABLE notation(
     id_client INTEGER REFERENCES client(id_client),
     note INTEGER,
     avis TEXT,
-    PRIMARY KEY (id_produit, id_client, note),
-    CHECK (note BETWEEN 1 AND 10)
+    PRIMARY KEY (id_produit, id_client),
+    CHECK (note BETWEEN 0 AND 10)
 );
