@@ -1,4 +1,5 @@
 /* Sous-requête corrélée */
+
 /* Les livres que tous les clients ont détesté */
 
 \! echo "\nLes titres detestés par tous les clients\n"

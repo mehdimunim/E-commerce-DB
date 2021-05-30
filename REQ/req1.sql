@@ -1,4 +1,5 @@
 /* Requêtes sur trois tables */
+
 /* Les clients qui ont commandé "Le Rouge et le Noir" */
 
 \! echo "\nLes clients qui ont commandé \"Le Rouge et le Noir\"\n"

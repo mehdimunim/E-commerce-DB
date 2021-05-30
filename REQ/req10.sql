@@ -2,7 +2,7 @@
 
 /* Les clients qui ont acheté tous les livres de Stendhal disponibles*/
 
-SELECT C.id_client
+SELECT C.prenom, C.nom
 FROM client C
 WHERE
 -- Il n'y a pas de livre de Stendhal qui ne se trouve pas dans les produits commandés du client

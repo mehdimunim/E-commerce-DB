@@ -1,4 +1,5 @@
 /*Sous-requête dans le FROM */
+
 /* Le nombre moyen de livres par commande*/
 
 \! echo "\nNombre moyen de livres par commande\n"
