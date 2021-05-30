@@ -1,16 +1,4 @@
-
- /*Q10 liste des livres qui ne sont commandé par aucun client */
-  
-\! echo "\nliste des livres qui ne sont commandés par aucun client:\n"
-
- SELECT titre,id_livre 
- FROM livre 
- WHERE id_livre 
- NOT IN ( SELECT id_produit
-          FROM produit_commande
- );
-
- /* Requête avec condition de totalité (sous requête corrélée)*/
+/* Requête avec condition de totalité (sous requête corrélée)*/
 
 /* Les clients qui ont acheté tous les livres de Stendhal disponibles*/
 

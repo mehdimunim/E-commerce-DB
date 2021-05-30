@@ -11,7 +11,6 @@
 
 /* Requête avec agrégat 1*/
 
-
 /* Les genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total */
 
 \! echo "\nles genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total\n"

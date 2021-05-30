@@ -1,0 +1,1 @@
+/* Requête avec des NULL */
