@@ -1,4 +1,4 @@
-/* sous-rq dans WHERE */
+/* Sous-requête dans le WHERE */
 /* Les clients qui lisent Jane Austen en VO*/
 
 \! echo "\nLes clients qui lisent Jane Austen en VO\n"
