@@ -22,15 +22,15 @@ Id du produit,Type de produit,Id du client,Note,Avis
 6,livre,11,10,Excellent
 11,livre,11,10,Excellent
 1,livre,7,6,plutot bien
-11,livre,3,,
+11,livre,3,1,
 5,livre,6,1,nul
 11,livre,8,4,deçu
 9,livre,7,1,nul
 7,livre,5,1,nul
-11,livre,9,10,"parfait "
+11,livre,9,10,parfait 
 7,livre,3,1,
-1,livre,5,,
-7,livre,7,,
+1,livre,5,1,
+7,livre,7,2,
 3,livre,8,9,"nulla magna, malesuada vel, convallis in, cursus et, eros. Proin ultrices. Duis volutpat nunc sit amet metus. Aliquam erat volutpat."
 5,livre,1,9,
 2,livre,6,10,excellentissime
@@ -82,7 +82,7 @@ Id du produit,Type de produit,Id du client,Note,Avis
 3,livre,1,9,génial
 3,livre,8,1,
 6,livre,3,4,
-9,livre,11,,
+9,livre,11,1,
 7,livre,3,6,plutôt bien
 9,livre,9,4,ininteressant
 7,livre,4,3,déçu
