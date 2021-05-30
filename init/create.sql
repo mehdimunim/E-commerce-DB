@@ -26,7 +26,7 @@ CREATE TABLE client(
     adresse TEXT NOT NULL,
     mail TEXT NOT NULL,
     telephone VARCHAR(20) NOT NULL,
-	date_naissance DATE,
+	  date_naissance DATE,
     date_inscription DATE
 ); 
 
@@ -102,7 +102,7 @@ CREATE TABLE commande(
     id_commande INTEGER PRIMARY KEY,
     date_commande VARCHAR(10),
     id_panier INTEGER REFERENCES panier(id_panier),
-	id_client INTEGER REFERENCES client(id_client),
+    id_client INTEGER REFERENCES client(id_client),
     adresse_livraison TEXT NOT NULL,
     prix_commande NUMERIC,
     mode_payement TEXT,
@@ -114,7 +114,7 @@ CREATE TABLE commande(
 CREATE TABLE commande_annulee(
     id_commande INTEGER PRIMARY KEY,
     date_annulation VARCHAR(10),
-	remboursement BOOLEAN,
+    remboursement BOOLEAN,
     FOREIGN KEY(id_commande) REFERENCES commande(id_commande)
 );
 
