@@ -159,6 +159,6 @@ CREATE TABLE notation(
     id_client INTEGER REFERENCES client(id_client),
     note INTEGER,
     avis TEXT,
-    PRIMARY KEY (id_produit, id_client, note),
+    PRIMARY KEY (id_produit, id_client),
     CHECK (note BETWEEN 0 AND 10)
 );
