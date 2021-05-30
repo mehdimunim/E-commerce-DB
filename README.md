@@ -73,26 +73,27 @@ Notre modélisation Entité-Relation et en schéma relationel pour la base de do
 
 Requêtes SQL
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
-17.
-18.
-19.
-20.
+1. Les clients ayant commandé "Le Rouge et le Noir"
+2. Liste des numéros des périodiques hebdomadaires
+3. Les titres qui existent en original et traduction
+4. Les livres détestés par tous les clients
+5. Le nombre moyen de livres par commande
+6. Les clients qui lisent Jane Austen en VO
+7. Les livres qui ne sont commandés par aucun client
+8. Les genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total
+9. Le nombre de livres traduits en français par langue d'origine
+10. les clients ayant commandé plus de 40 euros
+11. La moyenne entre genres des dates maximales de publication
+12. Les clients ayant acheté tous les livres de Stendhal disponibles (2 manières)
+13. Liste des clients ayant effectuer une commande ou non et la liste de toutes les commandes associées à un client ou non
+14. Clients qui n'ont jamais effectuer de commandes
+15. Nombre de livres traduits
+16. TOP 5 des livres les plus commandés
+17. TOP 5 des livres avec le plus de désistement
+18. Le nombre total de commandes pour chaque produit
+19. Les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis
+20. Les clients ayant apprécié que les livres
+21. La note moyenne donnée a chaque type de produit
 
 ## Exemples
 
