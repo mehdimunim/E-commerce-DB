@@ -1,12 +1,10 @@
+/* LEFT JOIN*/
 
-/* Requête avec jointure externe*/
+-- Envoyer un email de PUB aux clients qui n'ont jamais fait de commande :
 
-/* FULL JOIN*/
+\! echo "\nLes clients n'ayant jamais effectué de commande\n"
 
-/*10 clients ayant effectué une commande ou non et la liste de toutes les commandes associées à un client ou non*/
-
- SELECT prenom, nom, client.id_client,id_commande ,date_commande
- FROM client
- FULL JOIN commande ON client.id_client= commande.id_client
- LIMIT 10
-;
+SELECT client.id_client, nom, prenom, mail 
+FROM client 
+LEFT JOIN commande ON client.id_client = commande.id_client 
+WHERE commande.id_client is NULL;

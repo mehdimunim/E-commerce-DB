@@ -1,12 +1,11 @@
 /* Requête avec agrégat 1*/
 
-/* Les 5 genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total */
+-- Les genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total :
 
-\! echo "\nles 5 genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total\n"
-
+\! echo "\nles genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total\n"
 SELECT  S1.genre, ROUND(S1.count1/(1.0*S2.count2),1) AS "nombre de ventes par livre", S1.count1 AS "nombre de ventes"
 FROM
--- nombre de veqntes par genre
+-- nombre de ventes par genre
 (SELECT genre, COUNT(genre) as count1
 FROM produit_commande PC, livre
 WHERE PC.id_produit = livre.id_livre
@@ -26,5 +25,4 @@ DESC
 ) AS S2
 ORDER BY "nombre de ventes par livre"
 DESC
-LIMIT 5
 ;

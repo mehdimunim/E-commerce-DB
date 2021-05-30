@@ -1,6 +1,7 @@
-\! echo "\nle nombre total de commandes pour chaque produit:\n"
+-- Les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis
 
- SELECT type_produit AS "type", id_produit,SUM(quantite) AS total
- FROM produit_commande NATURAL JOIN produit
- GROUP BY "type";
+\! echo "\nLes clients ayant donné des notes supérieur à 8 aux produits\n"
 
+SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
+FROM client NATURAL JOIN  notation
+WHERE note>=8 AND avis IS NOT  NULL;

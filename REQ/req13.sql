@@ -2,6 +2,8 @@
 
 /* Les clients qui ont acheté tous les livres de Stendhal disponibles*/
 
+\! echo "\nLes clients qui ont acheté tous les livres de Stendhal disponibles\n"
+
 SELECT id_client
 FROM produit_commande pc
 JOIN commande c

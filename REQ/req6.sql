@@ -22,5 +22,4 @@ client.id_client IN
         AND langue = 'Anglais'
         AND auteur = 'Jane Austen' 
         )
-
 );

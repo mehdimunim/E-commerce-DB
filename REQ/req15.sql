@@ -1,9 +1,10 @@
-/* LEFT JOIN*/
+/* Requêtes avec des NULL */
 
--- Envoyer un email de PUB aux clients qui n'ont jamais fait de commande :
+-- Nombre de livres traduits :
 
-SELECT client.id_client, nom, prenom, mail 
-FROM client 
-LEFT JOIN commande ON client.id_client = commande.id_client 
-WHERE commande.id_client is NULL;
+\! echo "\nLe nombre de livres traduits (requêtes avec NULL)\n"
 
+SELECT COUNT(*) FROM livre;
+SELECT COUNT(titre_original) FROM livre;
+
+SELECT COUNT(*) FROM livre WHERE titre_original IS NOT NULL;

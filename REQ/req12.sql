@@ -2,6 +2,8 @@
 
 /* Les clients qui ont acheté tous les livres de Stendhal disponibles*/
 
+\! echo "\nLes clients qui ont acheté tous les livres de Stendhal disponibles\n"
+
 SELECT C.prenom, C.nom, C.id_client
 FROM client C
 WHERE
