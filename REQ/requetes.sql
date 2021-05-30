@@ -36,3 +36,17 @@ SELECT client.id_client, nom, prenom, mail FROM client
     LEFT JOIN commande ON client.id_client = commande.id_client 
     WHERE commande.id_client is NULL;
 
+-- Tous les livres qui n'ont pas de titres originaux
+SELECT titre FROM livre WHERE titre_original IS NULL;
+SELECT titre FROM livre;
+
+SELECT titre FROM livre WHERE langue=langue_origine;
+
+-- Même problématique en utilisant les COUNT
+-- Nombre de livre dans la BDD dont le titre original est le même que le titre actuel
+SELECT COUNT(*) FROM livre;
+SELECT COUNT(titre_original) FROM livre;
+
+SELECT COUNT(*) FROM livre WHERE titre_original IS NOT NULL;
+
+
