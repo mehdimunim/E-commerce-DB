@@ -1,101 +1,101 @@
-Id du produit,Type de produit,Id du client,Note,Avis
-5,livre,1,1,nul
-9,livre,11,5,moyen
-6,livre,4,7,bien
-9,livre,6,1,ininteressant
-7,livre,7,1,nul
-11,livre,11,2,decevant
-4,livre,3,2,decevant
-3,livre,9,1,nul
-6,livre,7,2,
-2,livre,11,7,bien
-11,livre,4,4,nul
-1,livre,7,9,Excellent
-9,livre,4,4,
-6,livre,4,9,excellent
-1,livre,5,7,bien
-11,livre,11,1,
-7,livre,2,7,bien
-3,livre,6,1,mauvais
-11,livre,5,5,moyen
-3,livre,8,10,Excellent
-6,livre,11,10,Excellent
-11,livre,11,10,Excellent
-1,livre,7,6,plutot bien
-11,livre,3,,
-5,livre,6,1,nul
-11,livre,8,4,deçu
-9,livre,7,1,nul
-7,livre,5,1,nul
-11,livre,9,10,"parfait "
-7,livre,3,1,
-1,livre,5,,
-7,livre,7,,
-3,livre,8,9,"nulla magna, malesuada vel, convallis in, cursus et, eros. Proin ultrices. Duis volutpat nunc sit amet metus. Aliquam erat volutpat."
-5,livre,1,9,
-2,livre,6,10,excellentissime
-2,livre,6,1,nul
-7,livre,6,7,pas mal
-4,livre,5,8,trés bien
-11,livre,9,1,sans interet
-11,livre,1,1,
-6,livre,11,7,
-11,livre,9,9,
-2,livre,8,8,
-6,livre,8,10,génial
-6,livre,7,3,nul
-2,livre,4,4,bof
-3,livre,6,2,ininteressant
-1,livre,4,7,plutot bien
-6,livre,1,9,excellent
-7,livre,3,5,moyen
-11,livre,11,6,assez bien
-5,livre,6,8,trés bien
-7,livre,8,9,excellent
-11,livre,2,3,nul
-3,livre,11,1,
-4,livre,4,5,
-7,livre,8,1,nul
-30,livre,6,1,nul
-6,livre,5,5,moyen
-3,livre,1,4,
-9,livre,7,10,Excellentissime
-6,livre,3,10,Excellentissime
-5,livre,7,7,pas mal
-8,livre,4,1,nul
-3,livre,8,4,deçu
-31,livre,9,1,nul
-7,livre,11,1,nul
-1,livre,3,5,moyen
-1,livre,1,1,nul
-1,livre,8,10,génial
-7,livre,8,10,parfait
-5,livre,3,1,
-1,livre,4,9,excellent
-2,livre,8,1,
-6,livre,4,5,moyen
-3,livre,3,5,
-4,livre,7,1,nul
-8,livre,1,10,excellentissime
-11,livre,8,7,bien
-7,livre,1,2,bof bof
-3,livre,1,9,génial
-3,livre,8,1,
-6,livre,3,4,
-9,livre,11,,
-7,livre,3,6,plutôt bien
-9,livre,9,4,ininteressant
-7,livre,4,3,déçu
-5,livre,3,8,interessant
-7,livre,4,2,nul
-7,livre,11,5,moyen
-4,livre,1,3,déçu
-11,livre,7,5,moyen
-3,livre,11,10,excellent
-2,livre,5,4,pas interessant
-1,livre,6,9,génial
-5,livre,2,3,pas interessant
-9,livre,7,8,interessant
-6,livre,6,8,interessant
-7,livre,9,2,déçu
-11,livre,11,4,pas interessant
+id_produit,type_produit,Id_client,note,avis
+126,livre,944,1,nul
+128,livre,7,9,excellent
+147,periodique,623,7,bien
+86,livre,901,4,decevant
+117,livre,212,9,excellent
+56,livre,596,2,nul
+176,periodique,119,9,excellent
+190,periodique,823,8,trés bien
+17,livre,547,3,nul
+149,periodique,713,1,"nul "
+86,livre,503,4,decevant
+70,livre,116,7,bien
+9,livre,108,9,excellent
+59,livre,400,9,
+154,periodique,783,7,bien
+198,periodique,298,4,
+125,livre,716,1,
+70,livre,138,5,moyen
+22,livre,899,5,
+62,livre,605,1,nul
+106,livre,710,2,nul
+169,periodique,269,7,bien
+169,periodique,546,4,
+2,livre,151,4,decevant
+64,livre,891,3,nul
+114,livre,110,1,nul
+138,periodique,30,3,nul
+120,livre,133,9,excellent
+121,livre,634,2,nul
+40,livre,712,6,plutôt bien
+46,livre,437,3,nul
+120,livre,572,7,bien
+51,livre,197,3,nul
+77,livre,461,7,bien
+199,periodique,159,5,
+53,livre,370,4,decevant
+174,periodique,936,6,plutôt bien
+10,livre,695,3,nul
+90,livre,608,5,moyen
+181,periodique,104,9,excellent
+113,livre,972,5,moyen
+49,livre,939,5,moyen
+12,livre,347,4,decevant
+74,livre,463,5,moyen
+57,livre,949,3,nul
+175,periodique,162,3,nul
+195,periodique,517,1,nul
+1,livre,626,1,nul
+80,livre,117,4,nul
+133,periodique,929,3,nul
+7,livre,160,4,decevant
+5,livre,558,1,nul
+28,livre,805,2,
+37,livre,166,7,bien
+56,livre,33,4,decevant
+49,livre,319,2,nul
+93,livre,219,7,bien
+83,livre,456,7,
+58,livre,51,9,excellent
+188,periodique,420,6,assez bien
+176,periodique,455,1,
+85,livre,98,9,
+1,livre,113,7,bien
+55,livre,513,1,
+85,livre,66,1,
+198,periodique,177,1,bien
+113,livre,973,4,
+75,livre,912,1,nul
+15,livre,240,5,
+51,livre,19,5,moyen
+45,livre,416,7,bien
+78,livre,51,7,
+181,periodique,251,3,nul
+155,periodique,802,3,
+6,livre,389,1," nul"
+122,livre,995,3,
+67,livre,6,5,moyen
+83,livre,764,4,
+87,livre,689,3,
+126,livre,570,8,trés bien
+60,livre,68,8,tés bien
+53,livre,913,6,
+100,livre,744,7,bien
+166,periodique,744,9,
+161,periodique,139,9,excellent
+193,periodique,42,4,
+180,periodique,901,1,
+112,livre,590,1,
+66,livre,936,2,nul
+25,livre,169,3,
+83,livre,696,1,
+52,livre,113,5,moyen
+139,periodique,158,1,nul
+49,livre,627,7,bien
+60,livre,627,1,
+177,periodique,178,9,excellent
+5,livre,463,1,nul
+100,livre,139,3,
+27,livre,235,8,trés bien
+163,periodique,226,3,nul
