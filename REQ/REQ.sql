@@ -1,8 +1,9 @@
 /* Concaténation de toutes les requêtes*/
 
-/* Requêtes sur trois tables */
 
-/* Les clients qui ont commandé "Le Rouge et le Noir" */
+/* 1. Requêtes sur trois tables */
+
+-- Les clients qui ont commandé "Le Rouge et le Noir" :
 
 \! echo "\nLes clients qui ont commandé \"Le Rouge et le Noir\"\n"
 SELECT prenom, nom, mail
@@ -19,6 +20,7 @@ titre = 'Le Rouge et le Noir'
 
 -- Liste des numéros des periodiques hebdomadaires :
 
+\! echo "\nListe des numéros des periodiques hebdomadaires\n"
 SELECT periodique.issn, periodique.titre, numero_periodique.date_publication
 	FROM numero_periodique, periodique, produit
 	WHERE numero_periodique.issn=periodique.issn
@@ -26,8 +28,10 @@ SELECT periodique.issn, periodique.titre, numero_periodique.date_publication
 		AND type_produit='periodique'
 		AND periodicite='Hebdomadaire';
 
-/* Auto-jointure */
-/* les titres français des livres qui existent à la fois en version original et traduite dans la base de données */
+
+/* 2. Auto-jointure */
+
+-- les titres français des livres qui existent à la fois en version original et traduite dans la base de données :
 
 \! echo "\nLes titres qui existent en original et traduction\n"
 (
@@ -45,12 +49,11 @@ AND l1.langue != 'Français'
 )
 ;
 
-/* Sous-requête corrélée */
+/* 3. Sous-requête corrélée */
 
-/* Les livres que tous les clients ont détesté */
+-- Les livres que tous les clients ont détesté :
 
 \! echo "\nLes titres detestés par tous les clients\n"
-
 SELECT titre, auteur
 FROM livre 
 WHERE id_livre
@@ -68,12 +71,11 @@ NOT EXISTS
 )
 ;
 
-/*Sous-requête dans le FROM */
+/* 4. Sous-requête dans le FROM */
 
-/* Le nombre moyen de livres par commande*/
+-- Le nombre moyen de livres par commande :
 
 \! echo "\nNombre moyen de livres par commande\n"
-
 SELECT ROUND(AVG(nb_produit), 1) AS "moyenne"
 FROM 
 (SELECT COUNT(produit.id_produit) AS nb_produit
@@ -84,9 +86,9 @@ type_produit = 'livre'
 GROUP BY id_commande
 ) AS S;
 
-/* Sous-requête dans le WHERE */
+/* 5. Sous-requête dans le WHERE */
 
-/* Les clients qui lisent Jane Austen en VO*/
+-- Les clients qui lisent Jane Austen en VO :
 
 \! echo "\nLes clients qui lisent Jane Austen en VO\n"
 SELECT nom, prenom
@@ -107,13 +109,11 @@ client.id_client IN
         AND langue = 'Anglais'
         AND auteur = 'Jane Austen' 
         )
-
 );
 
- /*Liste des livres qui ne sont commandés par aucun client */
-  
-\! echo "\nliste des livres qui ne sont commandés par aucun client:\n"
+-- Liste des livres qui ne sont commandés par aucun client :
 
+\! echo "\nliste des livres qui ne sont commandés par aucun client:\n"
  SELECT titre,id_livre 
  FROM livre 
  WHERE id_livre 
@@ -122,12 +122,11 @@ client.id_client IN
  );
 
 
-/* Requête avec agrégat 1*/
+/* 6. Requêtes avec agrégat*/
 
-/* Les genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total */
+-- Les genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total :
 
 \! echo "\nles genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total\n"
-
 SELECT  S1.genre, ROUND(S1.count1/(1.0*S2.count2),1) AS "nombre de ventes par livre", S1.count1 AS "nombre de ventes"
 FROM
 -- nombre de ventes par genre
@@ -152,13 +151,9 @@ ORDER BY "nombre de ventes par livre"
 DESC
 ;
 
-/* Requête avec aggrégat 2 */
-
-/* Le nombre de livres traduits en français par langue d'origine*/
-
+-- Le nombre de livres traduits en français par langue d'origine :
 
 \! echo "\nLe nombre de livres traduits en français par langue d'origine\n"
-
 SELECT langue_origine, COUNT(langue_origine) nombre_traductions_fr
 FROM livre
 GROUP BY langue_origine, langue
@@ -168,17 +163,19 @@ ORDER BY nombre_traductions_fr
 DESC
 ;
 
-/* Requête avec agrégat */
-\! echo "\nles clients ayant commandé plus de 40 euros:\n"
+-- Les clients ayant commandé plus de 120 euros :
 
- SELECT prenom, nom, SUM(prix_commande) AS "Prix total"
+\! echo "\nles clients ayant commandé plus de 120 euros:\n"
+ SELECT prenom, nom, SUM(prix_commande) AS "prix_total"
  FROM client NATURAL JOIN commande
  GROUP BY id_client
- HAVING SUM(prix_commande)>40;
+ HAVING SUM(prix_commande)>120
+ ORDER BY prix_total;
 
-/* Requête avec deux agrégats*/
 
-/* La moyenne entre genres des dates maximales de publication*/
+/* 7. Requête impliquant le calcul de deux agrégats*/
+
+-- La moyenne entre genres des dates maximales de publication :
 
 \! echo "\nLa moyenne entre genres des dates maximales de publication\n"
 SELECT ROUND(AVG(S.max)) AS "moyenne des maximums"
@@ -191,11 +188,12 @@ FROM
 ) AS S
 ;
 
-/* Requête avec condition de totalité (sous requête corrélée)*/
+/* 8.1 Requête avec condition de totalité (sous requête corrélée)*/
 
-/* Les clients qui ont acheté tous les livres de Stendhal disponibles*/
+-- Les clients qui ont acheté tous les livres de Stendhal disponibles :
 
-SELECT C.prenom, C.nom
+\! echo "\nLes clients qui ont acheté tous les livres de Stendhal disponibles 1\n"
+SELECT C.prenom, C.nom, C.id_client
 FROM client C
 WHERE
 -- Il n'y a pas de livre de Stendhal qui ne se trouve pas dans les produits commandés du client
@@ -216,57 +214,56 @@ WHERE c1.id_client = C.id_client
 )
 ;
 
-/* Requête avec condition de totalité (agrégation)*/
+/* 8.2 Requête avec condition de totalité (agrégation)*/
 
-/* Les clients qui ont acheté tous les livres de Stendhal disponibles*/
+-- Les clients qui ont acheté tous les livres de Stendhal disponibles :
 
-SELECT c.id_client
+\! echo "\nLes clients qui ont acheté tous les livres de Stendhal disponibles 2\n"
+SELECT id_client
 FROM produit_commande pc
-NATURAL JOIN client c
+JOIN commande c
+ON  pc.id_commande = c.id_commande
 JOIN livre l
 ON 
 pc.id_produit = l.id_livre
 WHERE auteur = 'Stendhal'
-GROUP BY c.id_client 
+GROUP BY id_client 
 HAVING COUNT(DISTINCT titre)
 = 
 (SELECT COUNT(DISTINCT titre)
 FROM livre
-WHERE auteur = 'Stendhal');
-
-/* Requête avec jointure externe*/
-
-/* FULL JOIN*/
-
-/*Lister tous les clients ayant effectuer une commande ou non et la liste de toutes les commandes associées à un client ou non*/
-
- SELECT prenom, nom, client.id_client,id_commande ,date_commande
- FROM client
- FULL JOIN commande ON client.id_client= commande.id_client
+WHERE auteur = 'Stendhal'
+)
 ;
 
-/* LEFT JOIN*/
+
+/* 9. Requête avec jointure externe (LEFT JOIN)*/
 
 -- Envoyer un email de PUB aux clients qui n'ont jamais fait de commande :
 
+\! echo "\nLes clients n'ayant jamais effectué de commande\n"
 SELECT client.id_client, nom, prenom, mail FROM client 
     LEFT JOIN commande ON client.id_client = commande.id_client 
     WHERE commande.id_client is NULL;
 
-/* Requêtes avec des NULL */
+
+/* 10. Requêtes avec des NULL */
 
 -- Nombre de livres traduits :
-
+\! echo "\nLe nombre de livres traduits (requêtes avec NULL)\n"
 SELECT COUNT(*) FROM livre;
 SELECT COUNT(titre_original) FROM livre;
 
 SELECT COUNT(*) FROM livre WHERE titre_original IS NOT NULL;
 
--- Requêtes en plus
 
+
+
+/* Requêtes en plus */
 
 -- TOP 5 des livres les plus commandés :
 
+\! echo "\nTOP 5 des livres les plus commandés\n"
 SELECT produit.id_produit, livre.titre, sum(produit_livre.quantite_livree) as total_vente
 	FROM produit_livre
 	INNER JOIN produit ON produit_livre.id_produit=produit.id_produit
@@ -278,6 +275,7 @@ SELECT produit.id_produit, livre.titre, sum(produit_livre.quantite_livree) as to
 
 -- TOP 5 des livres avec le plus de désistement :
 
+\! echo "\nTOP 5 des livres avec le plus de désistement\n"
 SELECT produit_commande.id_produit, livre.titre, sum(produit_commande.quantite) as nb_annulation FROM commande_annulee
 	INNER JOIN commande ON commande.id_commande=commande_annulee.id_commande
 	INNER JOIN produit_commande ON produit_commande.id_commande=commande.id_commande
@@ -288,18 +286,21 @@ SELECT produit_commande.id_produit, livre.titre, sum(produit_commande.quantite) 
 	ORDER BY nb_annulation DESC
 	LIMIT 5;
 
-\! echo "\nle nombre total de commandes pour chaque produit:\n"
+-- Le nombre total de commandes pour chaque type de produit :.
 
- SELECT type_produit AS "type", id_produit,SUM(quantite) AS total
- FROM produit_commande NATURAL JOIN produit
- GROUP BY "type",id_produit
- ORDER BY total;
+\! echo "\nle nombre total de commandes pour chaque type de produit:\n"
+SELECT type_produit AS "type", SUM(quantite) AS total
+FROM produit_commande NATURAL JOIN produit
+GROUP BY "type";
 
--- les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis
+-- Les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis :
 
+\! echo "\nLes clients ayant donné des notes supérieur à 8 aux produits\n"
 SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
 FROM client NATURAL JOIN  notation
 WHERE note>=8 AND avis IS NOT  NULL;
+
+-- Les clients n'ayant apprécié que les livres :
 
 \! echo "\nLes clients ayant apprécié que les livres\n"
  SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
@@ -307,10 +308,12 @@ WHERE note>=8 AND avis IS NOT  NULL;
  WHERE id_client IN
             (SELECT id_client
              FROM notation
-             WHERE (type_produit = 'livre'AND note>=5));
+             WHERE (type_produit = 'livre'AND note>5));
 
--- La note moyenne donnée a chaque type de produit
 
+-- La note moyenne donnée a chaque type de produit :
+
+\! echo "\nLa note moyenne donnée a chaque type de produit\n"
  SELECT type_produit,AVG(note) AS "note moyenne"
  FROM notation
  GROUP BY type_produit
