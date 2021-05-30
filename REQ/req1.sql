@@ -3,7 +3,7 @@
 /* Les clients qui ont commandé "Le Rouge et le Noir" */
 
 \! echo "\nLes clients qui ont commandé \"Le Rouge et le Noir\"\n"
-SELECT prenom, nom, mail
+SELECT prenom, nom, client.id_client, mail
 FROM client, livre, commande, produit_commande
 WHERE  
 produit_commande.id_commande = commande.id_commande
