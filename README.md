@@ -86,12 +86,12 @@ Requêtes SQL
 11. La moyenne entre genres des dates maximales de publication
 12. Les clients ayant acheté tous les livres de Stendhal disponibles (manière 1)
 13. Les clients ayant acheté tous les livres de Stendhal disponibles (manière 2)
-14. Les clients qui n'ont jamais effectuer de commandes
+14. Les clients qui n'ont jamais effectué de commandes
 15. Le nombre de livres traduits
 16. TOP 5 des livres les plus commandés
 17. TOP 5 des livres avec le plus de désistement
 18. Le nombre total de commandes pour chaque type de produit
-19. Les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis
+19. Les clients ayant donné des notes supérieur à 8 aux produits et ayant donné un avis
 20. Les clients n'ayant apprécié que les livres
 21. La note moyenne donnée à chaque type de produit
 
@@ -104,6 +104,7 @@ Requêtes SQL
 ## Sources
 
 * Pour la table livre.csv : données remplies à l'aide du site GoodReads.
+* Pour la table notation: génération des données avec [online test data generator] (http://www.onlinedatagenerator.com/) puis compplétée à la main.
 * Pour la table client.csv : données générées à 10 reprises avec [generatedata](http://www.generatedata.com/) puis légèrement modifiées.
 * Pour la table numero_periodique.csv : [Gallica](https://gallica.bnf.fr/) et [archive.org](https://archive.org/)
 
