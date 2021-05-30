@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS produit_livre CASCADE;
 DROP TABLE IF EXISTS historique_des_prix CASCADE;
 DROP TABLE IF EXISTS produit_retourne CASCADE;
 DROP TABLE IF EXISTS notation CASCADE;
+DROP TYPE IF EXISTS etat_commande;
 
 \! echo "\nCREATION DES TABLES\n"
 
@@ -24,16 +25,19 @@ CREATE TABLE client(
     nom TEXT NOT NULL,
     adresse TEXT NOT NULL,
     mail TEXT NOT NULL,
-    telephone VARCHAR(20) NOT NULL
+    telephone VARCHAR(20) NOT NULL,
+	  date_naissance DATE,
+    date_inscription DATE
 ); 
 
 CREATE TABLE produit(
     id_produit INTEGER PRIMARY KEY,
-    type_produit TEXT
+    type_produit TEXT,
+	delai_retour INTEGER
 );
 
 
-CREATE TABLE livre (
+CREATE TABLE livre(
     id_livre INTEGER PRIMARY KEY,
     titre TEXT NOT NULL,
     titre_original TEXT,
@@ -93,6 +97,7 @@ CREATE TABLE produit_dans_panier(
     CHECK (quantite >=0)
 );
 
+CREATE TYPE etat_commande AS ENUM ('en_attente','en_preparation', 'en_livraison','livree', 'annulee');
 CREATE TABLE commande( 
     id_commande INTEGER PRIMARY KEY,
     date_commande VARCHAR(10),
@@ -101,18 +106,21 @@ CREATE TABLE commande(
     adresse_livraison TEXT NOT NULL,
     prix_commande NUMERIC,
     mode_payement TEXT,
-    effectivement_paye VARCHAR(3)
+    effectivement_paye BOOLEAN,
+	etat etat_commande,
+	date_expedition VARCHAR(10)
 );
 
 CREATE TABLE commande_annulee(
     id_commande INTEGER PRIMARY KEY,
     date_annulation VARCHAR(10),
+    remboursement BOOLEAN,
     FOREIGN KEY(id_commande) REFERENCES commande(id_commande)
 );
 
 CREATE TABLE produit_commande(
-    id_commande INTEGER REFERENCES produit(id_produit),
-    id_produit INTEGER REFERENCES commande(id_commande),
+    id_commande INTEGER REFERENCES commande(id_commande),
+    id_produit INTEGER REFERENCES produit(id_produit),
     quantite INTEGER,
     PRIMARY KEY (id_produit, id_commande)
 );
@@ -125,7 +133,7 @@ CREATE TABLE produit_livre(
     PRIMARY KEY (id_produit, id_commande, date_livraison_effective)
 );
 /*Peut-on mettre une FK avec produit commande ou commande(date commande) ?*/
-CREATE TABLE produit_retourne( 
+CREATE TABLE produit_retourne(
     id_client INTEGER REFERENCES client(id_client),
     id_produit INTEGER REFERENCES produit(id_produit),
     date_commande VARCHAR(10),
@@ -142,7 +150,6 @@ CREATE TABLE historique_des_prix(
 );
 
 /* Modifier les contraintes FK en accord avec la modélisation*/
-
 CREATE TABLE notation(
     id_produit INTEGER REFERENCES produit(id_produit),
     type_produit VARCHAR(20),
@@ -150,5 +157,5 @@ CREATE TABLE notation(
     note INTEGER,
     avis TEXT,
     PRIMARY KEY (id_produit, id_client, note),
-    CHECK (note BETWEEN 1 AND 10)
+    CHECK (note BETWEEN 0 AND 10)
 );
