@@ -132,12 +132,15 @@ CREATE TABLE produit_livre(
     quantite_livree INTEGER,
     PRIMARY KEY (id_produit, id_commande, date_livraison_effective)
 );
+
 /*Peut-on mettre une FK avec produit commande ou commande(date commande) ?*/
+
 CREATE TABLE produit_retourne(
     id_client INTEGER REFERENCES client(id_client),
     id_produit INTEGER REFERENCES produit(id_produit),
-    date_commande DATE,
-    motif TEXT,
+    motif TEXT NOT NULL,
+	date_demande DATE NOT NULL,
+	date_retour DATE,
     montant NUMERIC,
     PRIMARY KEY (id_client, id_produit)
 );
