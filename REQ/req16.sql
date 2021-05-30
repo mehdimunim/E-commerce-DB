@@ -1,7 +1,9 @@
-/* Requête avec FULL JOIN*/
+/* Requête avec agrégat */
 
-/*Lister tous les clients ayant effectuer une commande ou non et la liste de toutes les commandes associées à un client ou non*/
+\! echo "\nnombre de produit mis dans le panier pour chaque produit:\n"
 
- SELECT prenom, nom, client.id_client,id_commande ,date_commande
- FROM client
- FULL JOIN ON commande client.id_client= commande.id_client
+
+ SELECT id_prod, SUM(produit_dans_panier.quantite) AS "nombre total"
+ FROM produit_dans_panier
+ GROUP BY id_prod
+ ORDER BY "nombre total";
