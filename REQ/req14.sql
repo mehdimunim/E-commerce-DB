@@ -1,5 +1,5 @@
 
- /*Liste des livres qui ne sont commandé par aucun client */
+ /*Liste des livres qui ne sont commandés par aucun client */
   
 \! echo "\nliste des livres qui ne sont commandés par aucun client:\n"
 
