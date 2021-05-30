@@ -1,5 +1,6 @@
+/* Requête avec agrégat */
 
-\! echo "\nnombre de produit mkis dans le panier pour chaque produit:\n"
+\! echo "\nnombre de produit mis dans le panier pour chaque produit:\n"
 
 
  SELECT id_prod, SUM(produit_dans_panier.quantite) AS "nombre total"

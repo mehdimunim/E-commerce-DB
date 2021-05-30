@@ -26,14 +26,14 @@ CREATE TABLE client(
     adresse TEXT NOT NULL,
     mail TEXT NOT NULL,
     telephone VARCHAR(20) NOT NULL,
-	date_naissance DATE,
+	  date_naissance DATE,
     date_inscription DATE
 ); 
 
 CREATE TABLE produit(
     id_produit INTEGER PRIMARY KEY,
     type_produit TEXT,
-	delai_retour INTEGER
+	  delai_retour INTEGER
 );
 
 
@@ -107,8 +107,8 @@ CREATE TABLE commande(
     prix_commande NUMERIC,
     mode_payement TEXT,
     effectivement_paye BOOLEAN,
-	etat etat_commande,
-	date_expedition DATE
+	  etat etat_commande,
+	  date_expedition DATE
 );
 
 CREATE TABLE commande_annulee(
@@ -133,14 +133,12 @@ CREATE TABLE produit_livre(
     PRIMARY KEY (id_produit, id_commande, date_livraison_effective)
 );
 
-/*Peut-on mettre une FK avec produit commande ou commande(date commande) ?*/
-
 CREATE TABLE produit_retourne(
     id_client INTEGER REFERENCES client(id_client),
     id_produit INTEGER REFERENCES produit(id_produit),
     motif TEXT NOT NULL,
-	date_demande DATE NOT NULL,
-	date_retour DATE,
+	  date_demande DATE NOT NULL,
+	  date_retour DATE,
     montant NUMERIC,
     PRIMARY KEY (id_client, id_produit)
 );
@@ -152,7 +150,6 @@ CREATE TABLE historique_des_prix(
     PRIMARY KEY (id_prod, date_prix)
 );
 
-/* Modifier les contraintes FK en accord avec la modélisation*/
 CREATE TABLE notation(
     id_produit INTEGER REFERENCES produit(id_produit),
     type_produit VARCHAR(20),
