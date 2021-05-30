@@ -88,11 +88,11 @@ client.id IN
 
 > Les livres les mieux vendus (le plus de commande)
 
-> Les livres où il y a le plus de désistement
+> Le nombre de livres traduit en français par langue
 
 7) moyennes d'un ensemble de maxiums
 
-> La moyenne des meilleurs ventes par genre.
+> La moyenne des meilleures ventes par genre.
 
 8) deux requêtes équivalentes exprimant une condition de totalité, l’une avec des sous-requêtes corrélée, l'autre avec de l'aggrégation
 
