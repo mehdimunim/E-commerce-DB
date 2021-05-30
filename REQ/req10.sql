@@ -8,7 +8,7 @@ WHERE
 -- Il n'y a pas de livre de Stendhal qui ne se trouve pas dans les produits commandés du client
 NOT EXISTS 
 -- livres écrits par Stendhal
-(SELECT DISTINCT l1.titre
+(SELECT DISTINCT l1.titregit 
 FROM livre l1
 WHERE l1.auteur = 'Stendhal'
 AND l1.id_livre
