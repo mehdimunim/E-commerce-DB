@@ -16,5 +16,3 @@ HAVING COUNT(DISTINCT titre)
 (SELECT COUNT(DISTINCT titre)
 FROM livre
 WHERE auteur = 'Stendhal'
-)
-;
