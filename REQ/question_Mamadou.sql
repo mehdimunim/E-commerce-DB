@@ -74,7 +74,11 @@
 
 
 
- /*Q13. Le prix moyen des produits */
+ /*Q13. Le prix moyen pour chaque type produit */
+  SELECT type_produit,AVG(prix) AS "prix moyen"
+ FROM commande
+ GROUP BY type_produit
+ ORDER BY "prix moyen
 
 
  /*Q14 le produit le plus cher */
@@ -87,16 +91,21 @@ SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
 FROM client NATURAL JOIN  notations
 WHERE note>=8 AND avis IS NOT  NULL;
 
- /*Q17 Les clients ayant apprécié les livres et detesté les périodiques*/
+ /*Q17 Les clients ayant apprécié que les livres*/
  SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
  FROM notations NATURAL JOIN client
  WHERE id_client IN
             (SELECT id_client
-            FROM notations
-            WHERE (type_produit = 'livre'AND note>=5)
-            AND (type_produit = 'periodique' AND note<5);
+             FROM notations
+             WHERE (type_produit = 'livre'AND note>=5 ))
 
- /*Q18 La note moyenne donnée aux produit */
+
+ /*Q18 La note moyenne donnée a chaque type de produit  */
+ SELECT type_produit,AVG(note) AS "note moyenne"
+ FROM notation
+ GROUP BY type_produit
+ ORDER BY "note moyenne"
+ 
 
  /* Q19 le taux produit retourné */
 
