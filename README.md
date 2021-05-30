@@ -93,7 +93,7 @@ Requêtes SQL
 18. Le nombre total de commandes pour chaque type de produit
 19. Les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis
 20. Les clients n'ayant apprécié que les livres
-21. La note moyenne donnée a chaque type de produit
+21. La note moyenne donnée à chaque type de produit
 
 ## Exemples
 
