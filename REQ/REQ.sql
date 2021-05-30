@@ -19,6 +19,7 @@ titre = 'Le Rouge et le Noir'
 ;
 
 -- Liste des numéros des periodiques hebdomadaires :
+
 \! echo "\nListe des numéros des periodiques hebdomadaires\n"
 SELECT periodique.issn, periodique.titre, numero_periodique.date_publication
 	FROM numero_periodique, periodique, produit
@@ -108,7 +109,6 @@ client.id_client IN
         AND langue = 'Anglais'
         AND auteur = 'Jane Austen' 
         )
-
 );
 
 -- Liste des livres qui ne sont commandés par aucun client :
@@ -122,7 +122,7 @@ client.id_client IN
  );
 
 
-/* 6. Requête avec agrégat 1*/
+/* 6. Requêtes avec agrégat*/
 
 -- Les genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total :
 
@@ -193,7 +193,7 @@ FROM
 -- Les clients qui ont acheté tous les livres de Stendhal disponibles :
 
 \! echo "\nLes clients qui ont acheté tous les livres de Stendhal disponibles 1\n"
-SELECT C.prenom, C.nom
+SELECT C.prenom, C.nom, C.id_client
 FROM client C
 WHERE
 -- Il n'y a pas de livre de Stendhal qui ne se trouve pas dans les produits commandés du client
@@ -219,33 +219,25 @@ WHERE c1.id_client = C.id_client
 -- Les clients qui ont acheté tous les livres de Stendhal disponibles :
 
 \! echo "\nLes clients qui ont acheté tous les livres de Stendhal disponibles 2\n"
-SELECT c.prenom, c.nom
+SELECT id_client
 FROM produit_commande pc
-NATURAL JOIN client c
+JOIN commande c
+ON  pc.id_commande = c.id_commande
 JOIN livre l
 ON 
 pc.id_produit = l.id_livre
 WHERE auteur = 'Stendhal'
-GROUP BY c.id_client 
+GROUP BY id_client 
 HAVING COUNT(DISTINCT titre)
 = 
 (SELECT COUNT(DISTINCT titre)
 FROM livre
-WHERE auteur = 'Stendhal');
-
-
-/* 9. Requête avec jointure externe*/
-
-/* 9.1 FULL JOIN*/
-
--- Lister tous les clients ayant effectuer une commande ou non et la liste de toutes les commandes associées à un client ou non :
-\! echo "\nNANI\n"
- SELECT prenom, nom, client.id_client,id_commande ,date_commande
- FROM client
- FULL JOIN commande ON client.id_client= commande.id_client
+WHERE auteur = 'Stendhal'
+)
 ;
 
-/* 9.2 LEFT JOIN*/
+
+/* 9. Requête avec jointure externe (LEFT JOIN)*/
 
 -- Envoyer un email de PUB aux clients qui n'ont jamais fait de commande :
 
@@ -320,6 +312,7 @@ WHERE note>=8 AND avis IS NOT  NULL;
 
 
 -- La note moyenne donnée a chaque type de produit :
+
 \! echo "\nLa note moyenne donnée a chaque type de produit\n"
  SELECT type_produit,AVG(note) AS "note moyenne"
  FROM notation
