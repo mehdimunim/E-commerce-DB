@@ -81,9 +81,20 @@
 
  /*Q15 le produit le plus acheté */
 
- /*Q16 le produit le mieux noté*/
+ /*Q16 les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis*/
+
+SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
+FROM client NATURAL JOIN  notations
+WHERE note>=8 AND avis IS NOT  NULL;
 
  /*Q17 Les clients ayant apprécié les livres et detesté les périodiques*/
+ SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
+ FROM notations NATURAL JOIN client
+ WHERE id_client IN
+            (SELECT id_client
+            FROM notations
+            WHERE (type_produit = 'livre'AND note>=5)
+            AND (type_produit = 'periodique' AND note<5);
 
  /*Q18 La note moyenne donnée aux produit */
 
