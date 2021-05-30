@@ -1,5 +1,5 @@
 /* sous-rq dans WHERE */
-/* Les clients qui ont acheté des livres en VO (donc non Français)*/
+/* Les clients qui lisent Jane Austen en VO*/
 
 \! echo "\nLes clients qui lisent Jane Austen en VO\n"
 SELECT nom, prenom
