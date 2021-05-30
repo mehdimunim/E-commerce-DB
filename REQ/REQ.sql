@@ -29,6 +29,8 @@ SELECT periodique.issn, periodique.titre, numero_periodique.date_publication
 /* Auto-jointure */
 /* les titres français des livres qui existent à la fois en version original et traduite dans la base de données */
 
+/* :(  :(  :( */
+
 \! echo "\nLes titres qui existent en original et traduction\n"
 (
 SELECT l1.titre, l2.auteur
@@ -244,7 +246,8 @@ WHERE auteur = 'Stendhal'
 
  SELECT prenom, nom, client.id_client,id_commande ,date_commande
  FROM client
- FULL JOIN ON commande client.id_client= commande.id_client
+ FULL JOIN commande ON client.id_client= commande.id_client
+;
 
 /* LEFT JOIN*/
 
@@ -290,18 +293,6 @@ SELECT produit_commande.id_produit, livre.titre, sum(produit_commande.quantite) 
 	HAVING produit.type_produit='livre'
 	ORDER BY nb_annulation DESC
 	LIMIT 5;
-    
-
--- Requête avec agrégat :
-
-\! echo "\nnombre de produit mis dans le panier pour chaque produit:\n"
-
-
- SELECT id_prod, SUM(produit_dans_panier.quantite) AS "nombre total"
- FROM produit_dans_panier
- GROUP BY id_prod
- ORDER BY "nombre total";
-
 
 \! echo "\nle nombre total de commandes pour chaque produit:\n"
 
@@ -313,10 +304,10 @@ SELECT produit_commande.id_produit, livre.titre, sum(produit_commande.quantite) 
 -- les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis
 
 SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
-FROM client NATURAL JOIN  notations
+FROM client NATURAL JOIN  notation
 WHERE note>=8 AND avis IS NOT  NULL;
 
-! echo "\nLes clients ayant apprécié que les livres\n"
+\! echo "\nLes clients ayant apprécié que les livres\n"
  SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
  FROM notations NATURAL JOIN client
  WHERE id_client IN
