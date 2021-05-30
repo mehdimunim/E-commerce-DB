@@ -288,14 +288,14 @@ SELECT produit_commande.id_produit, livre.titre, sum(produit_commande.quantite) 
 
 -- Le nombre total de commandes pour chaque type de produit :.
 
-\! echo "\nle nombre total de commandes pour chaque type de produit:\n"
+\! echo "\nle nombre total de commandes pour chaque type de produit\n"
 SELECT type_produit AS "type", SUM(quantite) AS total
 FROM produit_commande NATURAL JOIN produit
 GROUP BY "type";
 
--- Les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis :
+-- Les clients ayant donné des notes supérieures à 8 aux produits at ayant donné un avis :
 
-\! echo "\nLes clients ayant donné des notes supérieur à 8 aux produits\n"
+\! echo "\nLes clients ayant donné des notes supérieures à 8 aux produits\n"
 SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
 FROM client NATURAL JOIN  notation
 WHERE note>=8 AND avis IS NOT  NULL;
@@ -313,7 +313,7 @@ WHERE note>=8 AND avis IS NOT  NULL;
 
 -- La note moyenne donnée a chaque type de produit :
 
-\! echo "\nLa note moyenne donnée a chaque type de produit\n"
+\! echo "\nLa note moyenne donnée à chaque type de produit\n"
  SELECT type_produit,AVG(note) AS "note moyenne"
  FROM notation
  GROUP BY type_produit
