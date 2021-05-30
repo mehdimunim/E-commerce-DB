@@ -1,9 +1,8 @@
-/* Requête avec agrégat */
+/* Requêtes avec des NULL */
 
-\! echo "\nnombre de produit mis dans le panier pour chaque produit:\n"
+-- Nombre de livres traduits :
 
+SELECT COUNT(*) FROM livre;
+SELECT COUNT(titre_original) FROM livre;
 
- SELECT id_prod, SUM(produit_dans_panier.quantite) AS "nombre total"
- FROM produit_dans_panier
- GROUP BY id_prod
- ORDER BY "nombre total";
+SELECT COUNT(*) FROM livre WHERE titre_original IS NOT NULL;

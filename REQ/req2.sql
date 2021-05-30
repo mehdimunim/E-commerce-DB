@@ -1,18 +1,10 @@
-/* Auto-jointure */
-/* les titres français des livres qui existent à la fois en version original et traduite dans la base de données */
+/* Requêtes sur trois tables */
 
-\! echo "\nLes titres qui existent en original et traduction\n"
-(
-SELECT l1.titre, l2.auteur
-FROM livre AS l1, livre AS l2
-WHERE l1.titre = l2.titre_original
-AND l1.langue = 'Français'
-)
-UNION 
-( 
-SELECT l2.titre, l2.auteur
-FROM livre AS l1, livre AS l2
-WHERE l1.titre = l2.titre_original
-AND l1.langue != 'Français'
-)
-;
+-- Liste des numéros des periodiques hebdomadaires :
+
+SELECT periodique.issn, periodique.titre, numero_periodique.date_publication
+	FROM numero_periodique, periodique, produit
+	WHERE numero_periodique.issn=periodique.issn
+		AND produit.id_produit=numero_periodique.id
+		AND type_produit='periodique'
+		AND periodicite='Hebdomadaire';

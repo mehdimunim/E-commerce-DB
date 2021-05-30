@@ -1,40 +1,26 @@
 
+/* Sous-requête dans le WHERE */
 
-\! echo "\nle nombre total de commandes pour chaque produit:\n"
+/* Les clients qui lisent Jane Austen en VO*/
 
- SELECT type_produit AS "type", id_produit,SUM(quantite) AS total
- FROM produit_commande NATURAL JOIN produit
- GROUP BY "type",id_produit
- ORDER BY total;
+\! echo "\nLes clients qui lisent Jane Austen en VO\n"
+SELECT nom, prenom
+FROM client 
+WHERE 
+client.id_client IN  
+(   
+    /* clients ayant commandé des livres de Jane Austenen VO */
+    SELECT C.id_client 
+    FROM commande C, produit_commande P
+    WHERE C.id_commande = P.id_commande
+    AND 
+    EXISTS
+    /* id des livre traduits */
+    (   SELECT livre.id_livre
+        FROM livre
+        WHERE P.id_produit = livre.id_livre
+        AND langue = 'Anglais'
+        AND auteur = 'Jane Austen' 
+        )
 
-
-
-/* Requête avec agrégat 1*/
-
-/* Les genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total */
-
-\! echo "\nles genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total\n"
-
-SELECT  S1.genre, ROUND(S1.count1/(1.0*S2.count2),1) AS "nombre de ventes par livre", S1.count1 AS "nombre de ventes"
-FROM
--- nombre de veqntes par genre
-(SELECT genre, COUNT(genre) as count1
-FROM produit_commande PC, livre
-WHERE PC.id_produit = livre.id_livre
-GROUP BY genre
--- au moins 10 ventes au total
-HAVING COUNT(genre) > 10
-ORDER BY count1
-DESC
-) AS S1
--- nombre de livres par genre
-NATURAL JOIN
-(SELECT genre, COUNT(genre) as count2
-FROM livre
-GROUP BY genre
-ORDER BY count2
-DESC
-) AS S2
-ORDER BY "nombre de ventes par livre"
-DESC
-;
+);

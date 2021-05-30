@@ -1,15 +1,14 @@
-/* Requête avec aggrégat 2 */
 
-/* Le nombre de livres traduits en français par langue d'origine*/
+/* Sous-requête dans le WHERE */
 
+/*Liste des livres qui ne sont commandés par aucun client */
+  
+\! echo "\nliste des livres qui ne sont commandés par aucun client:\n"
 
-\! echo "\nLe nombre de livres traduits en français par langue d'origine\n"
+ SELECT titre,id_livre 
+ FROM livre 
+ WHERE id_livre 
+ NOT IN ( SELECT id_produit
+          FROM produit_commande
+ );
 
-SELECT langue_origine, COUNT(langue_origine) nombre_traductions_fr
-FROM livre
-GROUP BY langue_origine, langue
-HAVING langue = 'Français' 
-AND langue_origine != 'Français'
-ORDER BY nombre_traductions_fr
-DESC
-;

@@ -1,22 +1,18 @@
-/* Sous-requête corrélée */
+/* Auto-jointure */
+/* les titres français des livres qui existent à la fois en version original et traduite dans la base de données */
 
-/* Les livres que tous les clients ont détesté */
-
-\! echo "\nLes titres detestés par tous les clients\n"
-
-SELECT titre, auteur
-FROM livre 
-WHERE id_livre
-IN (
-/* Les identifiants de ces produits*/
-SELECT N.id_produit
-FROM notation N 
-WHERE 
-NOT EXISTS
- (   SELECT id_client
-    FROM notation N2
-    WHERE N.id_produit = N2.id_produit
-    AND
-    N2.note >= 5)
+\! echo "\nLes titres qui existent en original et traduction\n"
+(
+SELECT l1.titre, l2.auteur
+FROM livre AS l1, livre AS l2
+WHERE l1.titre = l2.titre_original
+AND l1.langue = 'Français'
+)
+UNION 
+( 
+SELECT l2.titre, l2.auteur
+FROM livre AS l1, livre AS l2
+WHERE l1.titre = l2.titre_original
+AND l1.langue != 'Français'
 )
 ;

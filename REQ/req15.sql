@@ -1,10 +1,8 @@
-/* Requête portant sur 3 tables */
+/* LEFT JOIN*/
 
--- Liste des numéros des periodiques hebdomadaires :
+-- Envoyer un email de PUB aux clients qui n'ont jamais fait de commande :
 
-SELECT periodique.issn, periodique.titre, numero_periodique.date_publication
-	FROM numero_periodique, periodique, produit
-	WHERE numero_periodique.issn=periodique.issn
-		AND produit.id_produit=numero_periodique.id
-		AND type_produit='periodique'
-		AND periodicite='Hebdomadaire';
+SELECT client.id_client, nom, prenom, mail FROM client 
+    LEFT JOIN commande ON client.id_client = commande.id_client 
+    WHERE commande.id_client is NULL;
+

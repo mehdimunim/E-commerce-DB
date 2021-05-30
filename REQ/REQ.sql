@@ -29,8 +29,6 @@ SELECT periodique.issn, periodique.titre, numero_periodique.date_publication
 /* Auto-jointure */
 /* les titres français des livres qui existent à la fois en version original et traduite dans la base de données */
 
-/* :(  :(  :( */
-
 \! echo "\nLes titres qui existent en original et traduction\n"
 (
 SELECT l1.titre, l2.auteur
@@ -258,8 +256,6 @@ SELECT client.id_client, nom, prenom, mail FROM client
     WHERE commande.id_client is NULL;
 
 /* Requêtes avec des NULL */
-
-/* Requêtes avec NULL */
 
 -- Nombre de livres traduits :
 

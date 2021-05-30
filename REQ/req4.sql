@@ -1,15 +1,23 @@
-/*Sous-requête dans le FROM */
 
-/* Le nombre moyen de livres par commande*/
+/* Sous-requête corrélée */
 
-\! echo "\nNombre moyen de livres par commande\n"
+/* Les livres que tous les clients ont détesté */
 
-SELECT ROUND(AVG(nb_produit), 1) AS "moyenne"
-FROM 
-(SELECT COUNT(produit.id_produit) AS nb_produit
-FROM produit_commande, produit
-WHERE produit.id_produit =  produit_commande.id_produit
-AND 
-type_produit = 'livre'
-GROUP BY id_commande
-) AS S;
+\! echo "\nLes titres detestés par tous les clients\n"
+
+SELECT titre, auteur
+FROM livre 
+WHERE id_livre
+IN (
+/* Les identifiants de ces produits*/
+SELECT N.id_produit
+FROM notation N 
+WHERE 
+NOT EXISTS
+ (   SELECT id_client
+    FROM notation N2
+    WHERE N.id_produit = N2.id_produit
+    AND
+    N2.note >= 5)
+)
+;

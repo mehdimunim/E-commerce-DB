@@ -1,18 +1,15 @@
-/* Requête avec condition de totalité (agrégation)*/
+/* Requête avec aggrégat 2 */
 
-/* Les clients qui ont acheté tous les livres de Stendhal disponibles*/
+/* Le nombre de livres traduits en français par langue d'origine*/
 
-SELECT c.prenom, c.nom
-FROM produit_commande pc
-JOIN commande c
-ON  pc.id_commande = c.id_commande
-JOIN livre l
-ON 
-pc.id_produit = l.id_livre
-WHERE auteur = 'Stendhal'
-GROUP BY c.id_client 
-HAVING COUNT(DISTINCT titre)
-= 
-(SELECT COUNT(DISTINCT titre)
+
+\! echo "\nLe nombre de livres traduits en français par langue d'origine\n"
+
+SELECT langue_origine, COUNT(langue_origine) nombre_traductions_fr
 FROM livre
-WHERE auteur = 'Stendhal'
+GROUP BY langue_origine, langue
+HAVING langue = 'Français' 
+AND langue_origine != 'Français'
+ORDER BY nombre_traductions_fr
+DESC
+;

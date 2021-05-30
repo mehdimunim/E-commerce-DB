@@ -1,7 +1,6 @@
-/* Jointure externe */
+\! echo "\nle nombre total de commandes pour chaque produit:\n"
 
--- Envoyer un email de PUB aux clients qui n'ont jamais fait de commande :
-
-SELECT client.id_client, nom, prenom, mail FROM client 
-    LEFT JOIN commande ON client.id_client = commande.id_client 
-    WHERE commande.id_client is NULL;
+ SELECT type_produit AS "type", id_produit,SUM(quantite) AS total
+ FROM produit_commande NATURAL JOIN produit
+ GROUP BY "type",id_produit
+ ORDER BY total;

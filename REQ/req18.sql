@@ -1,5 +1,3 @@
-/* 2 agrégats */
-
 -- TOP 5 des livres avec le plus de désistement :
 
 SELECT produit_commande.id_produit, livre.titre, sum(produit_commande.quantite) as nb_annulation FROM commande_annulee
