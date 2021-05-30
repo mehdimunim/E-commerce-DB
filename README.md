@@ -86,8 +86,8 @@ Requêtes SQL
 11. La moyenne entre genres des dates maximales de publication
 12. Les clients ayant acheté tous les livres de Stendhal disponibles (manière 1)
 13. Les clients ayant acheté tous les livres de Stendhal disponibles (manière 2)
-14. Clients qui n'ont jamais effectuer de commandes
-15. Nombre de livres traduits
+14. Les clients qui n'ont jamais effectuer de commandes
+15. Le nombre de livres traduits
 16. TOP 5 des livres les plus commandés
 17. TOP 5 des livres avec le plus de désistement
 18. Le nombre total de commandes pour chaque type de produit
