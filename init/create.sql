@@ -26,7 +26,7 @@ CREATE TABLE client(
     adresse TEXT NOT NULL,
     mail TEXT NOT NULL,
     telephone VARCHAR(20) NOT NULL,
-	  date_naissance DATE,
+	date_naissance DATE,
     date_inscription DATE
 ); 
 
@@ -98,6 +98,7 @@ CREATE TABLE produit_dans_panier(
 );
 
 CREATE TYPE etat_commande AS ENUM ('en_attente','en_preparation', 'en_livraison','livree', 'annulee');
+
 CREATE TABLE commande( 
     id_commande INTEGER PRIMARY KEY,
     date_commande VARCHAR(10),
@@ -132,7 +133,6 @@ CREATE TABLE produit_livre(
     quantite_livree INTEGER,
     PRIMARY KEY (id_produit, id_commande, date_livraison_effective)
 );
-/*Peut-on mettre une FK avec produit commande ou commande(date commande) ?*/
 CREATE TABLE produit_retourne(
     id_client INTEGER REFERENCES client(id_client),
     id_produit INTEGER REFERENCES produit(id_produit),
@@ -149,7 +149,6 @@ CREATE TABLE historique_des_prix(
     PRIMARY KEY (id_prod, date_prix)
 );
 
-/* Modifier les contraintes FK en accord avec la modélisation*/
 CREATE TABLE notation(
     id_produit INTEGER REFERENCES produit(id_produit),
     type_produit VARCHAR(20),
