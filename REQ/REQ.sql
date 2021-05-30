@@ -220,7 +220,7 @@ WHERE c1.id_client = C.id_client
 
 /* Les clients qui ont acheté tous les livres de Stendhal disponibles*/
 
-SELECT c.prenom, c.nom
+SELECT c.id_client
 FROM produit_commande pc
 NATURAL JOIN client c
 JOIN livre l

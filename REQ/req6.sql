@@ -4,7 +4,7 @@
 /* Les clients qui lisent Jane Austen en VO*/
 
 \! echo "\nLes clients qui lisent Jane Austen en VO\n"
-SELECT nom, prenom
+SELECT nom, prenom, id_client
 FROM client 
 WHERE 
 client.id_client IN  
