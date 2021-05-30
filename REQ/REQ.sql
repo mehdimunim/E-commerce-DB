@@ -6,7 +6,7 @@
 -- Les clients qui ont commandé "Le Rouge et le Noir" :
 
 \! echo "\nLes clients qui ont commandé \"Le Rouge et le Noir\"\n"
-SELECT prenom, nom, mail
+SELECT prenom, nom, client.id_client, mail
 FROM client, livre, commande, produit_commande
 WHERE  
 produit_commande.id_commande = commande.id_commande
@@ -113,7 +113,7 @@ client.id_client IN
 
 -- Liste des livres qui ne sont commandés par aucun client :
 
-\! echo "\nliste des livres qui ne sont commandés par aucun client:\n"
+\! echo "\nLes livres qui ne sont commandés par aucun client:\n"
  SELECT titre,id_livre 
  FROM livre 
  WHERE id_livre 
