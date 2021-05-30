@@ -14,14 +14,14 @@
 
 
 /*Q.6 
- -le nombre total de commandes pour chaque produit
+ -le nombre total de commandes pour chaque produit*/
 
- SELECT id_produit, SUM(quantite)
+ SELECT id_produit, SUM(quantite) AS total
  FROM produit_commande
  GROUP BY id_produit
 
 
- - les clients ayant commandé plus de 40 euros
+ /*- les clients ayant commandé plus de 40 euros*/
 
  SELECT prenom, nom, SUM(prix_commande)
  FROM client NaTURAL JOIN commande
@@ -29,13 +29,13 @@
  HAVING SUM(prix_commande) > 40
 
 
- */
+ 
 
 /*Q7 listes des livres commandés par tous les clients */
 
 
 
- /*Q.8 Lister tous les clients ayant effectuer une commande ou non et la liste de toutes les commandes associées à un client ou non
+ /*Q.8 Lister tous les clients ayant effectuer une commande ou non et la liste de toutes les commandes associées à un client ou non*/
 
  SELECT prenom, nom, client.id_client,id_commande ,date_commande
  FROM client
@@ -61,12 +61,17 @@
 
  /*Q11 la nombre total de périodique mis dans le panier pour chaque type */
 
- SELECT  SUM(produit_dans_panier.quantite) AS "nombre total"
- FROM produit_dans_panier,
- WHERE produit
+ SELECT id_produit, SUM(produit_dans_panier.quantite) AS "nombre total"
+ FROM produit_dans_panier
+ GROUP BY id_produit;
 
 
  /*Q12 le pourcentage de clients ayant passé une commande supérieur ou égale 50 euros*/
+
+ SELECT count(id_client) AS "nombre total", SUM(prix_commande)
+ FROM commande
+ HAVING SUM(prix_commande);
+
 
 
  /*Q13. Le prix moyen des produits */
