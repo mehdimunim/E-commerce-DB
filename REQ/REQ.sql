@@ -309,10 +309,10 @@ WHERE note>=8 AND avis IS NOT  NULL;
 
 \! echo "\nLes clients ayant apprécié que les livres\n"
  SELECT prenom,nom,client.id_client,id_produit,type_produit,note,avis
- FROM notations NATURAL JOIN client
+ FROM notation NATURAL JOIN client
  WHERE id_client IN
             (SELECT id_client
-             FROM notations
+             FROM notation
              WHERE (type_produit = 'livre'AND note>=5));
 
 -- La note moyenne donnée a chaque type de produit
