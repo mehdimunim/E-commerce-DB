@@ -90,9 +90,9 @@ Requêtes SQL
 15. Nombre de livres traduits
 16. TOP 5 des livres les plus commandés
 17. TOP 5 des livres avec le plus de désistement
-18. Le nombre total de commandes pour chaque produit
+18. Le nombre total de commandes pour chaque type de produit
 19. Les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis
-20. Les clients ayant apprécié que les livres
+20. Les clients n'ayant apprécié que les livres
 21. La note moyenne donnée a chaque type de produit
 
 ## Exemples
