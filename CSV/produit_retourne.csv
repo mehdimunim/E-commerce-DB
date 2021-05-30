@@ -1,21 +1,18 @@
-id du client," id du produit"," date de commande"," motif"," montant",
-1,"4",,"""produit moche""",
-2,"5",,"""le livre ne m'a pas plu""","1"
-3,"6",,"""le livre ne convenait pas à mon âge. J'ai 13 ans...""","4"
-4,"7",,"""livre abîmé""","5"
-5,"8",,"""le livre ne m'a pas plu""","6"
-6,"9",,"""Juste nul""","4"
-7,"10",,"""produit moche""","4"
-8,"11",,"""livre abîmé""","4"
-9,"12",,"""Quel ***""","4"
-10,"13",,"""livre abîmé""","4"
-11,"14",,"""livre abîmé""","4"
-12,"15",,"""Quel ***""","4"
-13,"16",,"""produit moche""","4"
-14,"17",,"""le livre ne m'a pas plu""","1"
-15,"18",,"""livre abîmé""","1"
-16,"19",,"""le livre ne m'a pas plu""","1"
-17,"20",,"""produit moche""","1"
-18,"21",,"""Juste nul""","1"
-19,"22",,"""produit moche""","1"
-20,"23",,"""Quel ***""",
+id_client, id_produit, motif,date_demande,date_retour, montant
+60,1,"""produit moche""",2021-05-14,2021-05-18,1
+43,2,"""le livre ne m'a pas plu""",2021-05-24,,
+19,3,"""le livre ne convenait pas à mon âge. J'ai 13 ans...""",2021-05-31,,
+145,4,"""livre abîmé""",2021-05-31,,
+86,5,"""le livre ne m'a pas plu""",2021-05-29,,
+135,6,"""Juste nul""",2021-05-28,,
+116,7,"""produit moche""",2021-05-31,,
+78,8,"""livre abîmé""",2021-05-16,2021-05-20,4
+77,9,"""Quel ***""",2021-05-29,,
+23,11,"""livre abîmé""",2021-05-17,2021-05-24,4
+39,12,"""livre abîmé""",2021-05-30,,
+94,13,"""Quel ***""",2021-05-09,,
+84,13,"""produit moche""",2021-05-17,2021-05-25,4
+106,13,"""le livre ne m'a pas plu""",2021-05-14,2021-05-20,1
+176,13,"""livre abîmé""",2021-05-29,,
+170,13,"""le livre ne m'a pas plu""",2021-05-22,,
+138,13,"""produit moche""",2021-05-15,2021-05-24,1
