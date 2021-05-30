@@ -30,3 +30,9 @@ SELECT produit_commande.id_produit, livre.titre, sum(produit_commande.quantite) 
 	HAVING produit.type_produit='livre'
 	ORDER BY nb_annulation DESC
 	LIMIT 5;
+	
+-- Envoyer un email de PUB aux clients qui n'ont jamais fait de commande
+SELECT client.id_client, nom, prenom, mail FROM client 
+    LEFT JOIN commande ON client.id_client = commande.id_client 
+    WHERE commande.id_client is NULL;
+

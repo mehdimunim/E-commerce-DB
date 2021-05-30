@@ -26,7 +26,7 @@ CREATE TABLE client(
     adresse TEXT NOT NULL,
     mail TEXT NOT NULL,
     telephone VARCHAR(20) NOT NULL,
-	  date_naissance DATE,
+	date_naissance DATE,
     date_inscription DATE
 ); 
 
@@ -97,10 +97,10 @@ CREATE TABLE produit_dans_panier(
     CHECK (quantite >=0)
 );
 
-CREATE TYPE etat_commande AS ENUM ('en_attente','en_preparation', 'en_livraison','livree', 'annulee');
+CREATE TYPE etat_commande AS ENUM ('en_attente', 'en_preparation', 'en_livraison', 'livree', 'annulee');
 CREATE TABLE commande( 
     id_commande INTEGER PRIMARY KEY,
-    date_commande VARCHAR(10),
+    date_commande DATE,
     id_panier INTEGER REFERENCES panier(id_panier),
     id_client INTEGER REFERENCES client(id_client),
     adresse_livraison TEXT NOT NULL,
@@ -108,12 +108,12 @@ CREATE TABLE commande(
     mode_payement TEXT,
     effectivement_paye BOOLEAN,
 	etat etat_commande,
-	date_expedition VARCHAR(10)
+	date_expedition DATE
 );
 
 CREATE TABLE commande_annulee(
     id_commande INTEGER PRIMARY KEY,
-    date_annulation VARCHAR(10),
+    date_annulation DATE,
     remboursement BOOLEAN,
     FOREIGN KEY(id_commande) REFERENCES commande(id_commande)
 );
@@ -128,23 +128,26 @@ CREATE TABLE produit_commande(
 CREATE TABLE produit_livre(
     id_produit INTEGER REFERENCES produit(id_produit),
     id_commande INTEGER REFERENCES commande(id_commande),
-    date_livraison_effective VARCHAR(10),
+    date_livraison_effective DATE,
     quantite_livree INTEGER,
     PRIMARY KEY (id_produit, id_commande, date_livraison_effective)
 );
+
 /*Peut-on mettre une FK avec produit commande ou commande(date commande) ?*/
+
 CREATE TABLE produit_retourne(
     id_client INTEGER REFERENCES client(id_client),
     id_produit INTEGER REFERENCES produit(id_produit),
-    date_commande VARCHAR(10),
-    motif TEXT,
+    motif TEXT NOT NULL,
+	date_demande DATE NOT NULL,
+	date_retour DATE,
     montant NUMERIC,
     PRIMARY KEY (id_client, id_produit)
 );
 
 CREATE TABLE historique_des_prix(
     id_prod INTEGER REFERENCES produit(id_produit),
-    date_prix VARCHAR(10),
+    date_prix DATE,
     prix_unitaire NUMERIC NOT NULL,
     PRIMARY KEY (id_prod, date_prix)
 );
@@ -156,6 +159,6 @@ CREATE TABLE notation(
     id_client INTEGER REFERENCES client(id_client),
     note INTEGER,
     avis TEXT,
-    PRIMARY KEY (id_produit, id_client, note),
+    PRIMARY KEY (id_produit, id_client),
     CHECK (note BETWEEN 0 AND 10)
 );
