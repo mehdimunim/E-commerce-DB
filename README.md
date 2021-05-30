@@ -82,17 +82,18 @@ Requêtes SQL
 7. Les livres qui ne sont commandés par aucun client
 8. Les genres de livre les mieux vendus parmi ceux avec plus de 10 ventes au total
 9. Le nombre de livres traduits en français par langue d'origine
-10. les clients ayant commandé plus de 40 euros
+10. les clients ayant commandé plus de 120 euros
 11. La moyenne entre genres des dates maximales de publication
-12. Les clients ayant acheté tous les livres de Stendhal disponibles (2 manières)
-13. Clients qui n'ont jamais effectuer de commandes
-14. Nombre de livres traduits
-15. TOP 5 des livres les plus commandés
-16. TOP 5 des livres avec le plus de désistement
-17. Le nombre total de commandes pour chaque type de produit
-18. Les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis
-19. Les clients n'ayant apprécié que les livres
-20. La note moyenne donnée a chaque type de produit
+12. Les clients ayant acheté tous les livres de Stendhal disponibles (manière 1)
+13. Les clients ayant acheté tous les livres de Stendhal disponibles (manière 2)
+14. Clients qui n'ont jamais effectuer de commandes
+15. Nombre de livres traduits
+16. TOP 5 des livres les plus commandés
+17. TOP 5 des livres avec le plus de désistement
+18. Le nombre total de commandes pour chaque type de produit
+19. Les clients ayant donné des notes supérieur à 8 aux produits at ayant donné un avis
+20. Les clients n'ayant apprécié que les livres
+21. La note moyenne donnée a chaque type de produit
 
 ## Exemples
 
