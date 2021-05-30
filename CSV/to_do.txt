@@ -16,3 +16,10 @@
 14. produit_retourne                         OK    
 15. produit                                  OK
 
+------------------------------------------------------------------------------------------------------
+
+- Vérifier les contraintes sur create.sql
+- Vérifier les requêtes SQL sur nos trois branches: s'il en a 20 + si tous les items sont complétés
+- Redessiner la modélisation en draw.io en suivant les CSV + create.sql (ajouter des couleurs aussi)
+- Fusionner les branches
+- Ajouter num étudiant Lauréna sur README.md (cf. 'projet_bd')
