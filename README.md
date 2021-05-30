@@ -104,7 +104,7 @@ Requêtes SQL
 ## Sources
 
 * Pour la table livre.csv : données remplies à l'aide du site GoodReads.
-* Pour la table notation: génération des données avec [online test data generator] (http://www.onlinedatagenerator.com/) puis compplétée à la main.
+* Pour la table notation: génération des données avec [online test data generator](http://www.onlinedatagenerator.com/) puis compplétée à la main.
 * Pour la table client.csv : données générées à 10 reprises avec [generatedata](http://www.generatedata.com/) puis légèrement modifiées.
 * Pour la table numero_periodique.csv : [Gallica](https://gallica.bnf.fr/) et [archive.org](https://archive.org/)
 
