@@ -130,7 +130,7 @@ client.id_client IN
 
 SELECT  S1.genre, ROUND(S1.count1/(1.0*S2.count2),1) AS "nombre de ventes par livre", S1.count1 AS "nombre de ventes"
 FROM
--- nombre de veqntes par genre
+-- nombre de ventes par genre
 (SELECT genre, COUNT(genre) as count1
 FROM produit_commande PC, livre
 WHERE PC.id_produit = livre.id_livre
@@ -222,8 +222,7 @@ WHERE c1.id_client = C.id_client
 
 SELECT c.prenom, c.nom
 FROM produit_commande pc
-JOIN commande c
-ON  pc.id_commande = c.id_commande
+NATURAL JOIN client c
 JOIN livre l
 ON 
 pc.id_produit = l.id_livre
@@ -233,8 +232,7 @@ HAVING COUNT(DISTINCT titre)
 = 
 (SELECT COUNT(DISTINCT titre)
 FROM livre
-WHERE auteur = 'Stendhal'
-);
+WHERE auteur = 'Stendhal');
 
 /* Requête avec jointure externe*/
 
