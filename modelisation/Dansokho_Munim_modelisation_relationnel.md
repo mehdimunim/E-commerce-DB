@@ -11,23 +11,29 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * `id du client`
 
-* Mail **Non nul**
-
 * Prénom **Non nul**
 
 * Nom **Non nul**
 
 * Adresse **Non nul**
 
+* Mail **Non nul**
+
 * numéro de téléphone **Non nul**
+
+* Date de naissance **Non nul**
+
+* Date d'inscription **Non nul**
 
 ## Produit
 
- > Les produits et leurs types (livres ou périodiques).
+ > Les produits, leurs types (livres ou périodiques) et le délai maximal après commande pour le retourné.
 
 * `Id du produit`
 
 * Type de produit **dans "livre" U "périodique"**
+
+* Délai retour **0 pour les périodiques et 15 pour les livres**
 
 ## Livre
 
@@ -139,11 +145,17 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * effectivement payé ? **dans "Oui" U "Non"**
 
+* Etat de la commande **dans "En attente", "En préparation", "En livraison", "Livrée", "Annulée"**
+
+* Date d'expédition
+
 ## Commande annulée
 
 > L'ensemble des commandes annulées.
 
 * `id commande` **FK Commande(Id commande)**
+
+* Remboursement ?
 
 * Date d'annulation **Supérieure à Commande(date de commande)**
 
@@ -191,7 +203,7 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * `Date`
 
-* Prix unitaire
+* Prix unitaire **Non nul**
 
 ## Notation
 
@@ -201,6 +213,8 @@ Les différentes tables et leurs attributs. Pour les produits, nous avons choisi
 
 * `Id du client` **FK Produit livré(id)**
 
-* Note **Entre 1 et 10 inclus**
+* Type du produit
+
+* Note **Entre 0 et 10 inclus**
 
 * Avis **Sous forme d'un court texte**
