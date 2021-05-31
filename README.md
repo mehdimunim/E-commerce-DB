@@ -8,7 +8,6 @@
 * [Description](#description)
 * [Fonctionnalités](#fonctionnalités)
 * [Utilisation](#utilisation)
-* [Exemples](#exemples)
 * [Technologies utilisées](#technologies)
 * [Sources](#sources)
 * [License](#license)
@@ -47,15 +46,9 @@ Enfin, nos clients peuvent attribuer une note aux produits achetés.
 
 1. Lancer le fichier `init/create.sql` 
 2. Lancer `init/fill.sql`
-3. Effectuer les requêtes voulues grâce à `REQ/reqX.sql` ou X va de 1 à 20. 
-
-Alternativement lancer le fichier `run.sh` puis faire les [requêtes](#REQ) désirées .
+3. Effectuer les requêtes voulues grâce à `REQ/reqX.sql` ou X va de 1 à 21. 
 
 ## Contenu
-
-### run.sh
-
-Initialise les tables et lance la requête 1.
 
 ### CSV
 
@@ -94,8 +87,6 @@ Requêtes SQL
 19. Les clients ayant donné des notes supérieur à 8 aux produits et ayant donné un avis
 20. Les clients n'ayant apprécié que les livres
 21. La note moyenne donnée à chaque type de produit
-
-## Exemples
 
 ## Technologies
 
