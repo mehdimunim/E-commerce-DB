@@ -6,7 +6,7 @@ id_produit,type_produit,Id_client,note,avis
 117,livre,212,9,excellent
 56,livre,596,2,nul
 176,periodique,119,9,excellent
-190,periodique,823,8,trés bien
+190,periodique,823,8,très bien
 17,livre,547,3,nul
 149,periodique,713,1,"nul "
 86,livre,503,4,decevant
@@ -78,8 +78,8 @@ id_produit,type_produit,Id_client,note,avis
 67,livre,6,5,moyen
 83,livre,764,4,
 87,livre,689,3,
-126,livre,570,8,trés bien
-60,livre,68,8,tés bien
+126,livre,570,8,très bien
+60,livre,68,8,très bien
 53,livre,913,6,
 100,livre,744,7,bien
 166,periodique,744,9,
@@ -97,5 +97,5 @@ id_produit,type_produit,Id_client,note,avis
 177,periodique,178,9,excellent
 5,livre,463,1,nul
 100,livre,139,3,
-27,livre,235,8,trés bien
+27,livre,235,8,très bien
 163,periodique,226,3,nul
