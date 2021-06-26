@@ -60,7 +60,7 @@ Commandes SQL pour initialiser les tables
 
 ## modelisation
 
-Notre modélisation Entité-Relation et en schéma relationel pour la base de données
+Notre modélisation Entité-Relation et en schéma relationnel pour la base de données
 
 ### REQ
 
